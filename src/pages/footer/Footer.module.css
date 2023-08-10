@@ -1,34 +1,82 @@
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-footer {
-  background-color: #FC8019;
-  width: 100vw;
-}
-
-.content {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono&family=Work+Sans&display=swap");
+.content .scope {
+  margin-top: 50px;
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
+  height: 15vw;
+  background: #FC8019;
 }
-
-.teste {
-  color: #ce0202;
-  font-size: 4440px;
+.content .scope figure {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 0;
 }
-
-ul {
+.content .scope figure svg {
+  fill: #FC8019;
+  margin: 0;
+  padding-top: 5px;
+}
+.content .scope figure h5 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.content .scope nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 4vw;
+  gap: 70px;
+  padding: 0;
 }
-
-.li {
+.content .scope nav li a {
   display: inline-block;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+.content .scope nav li a:hover {
+  transition: all 0.3s ease;
+  color: #e2e2e2;
+  transform: scale(1.5, 1.5);
+  transform-origin: center;
+}
+.content .scope .contact {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.content .scope .contact span {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.content .mediasocials {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  gap: 20px;
+}
+.content .mediasocials svg {
+  /*width: 22px;
+  height: 22px;*/
 }/*# sourceMappingURL=Footer.module.css.map */
