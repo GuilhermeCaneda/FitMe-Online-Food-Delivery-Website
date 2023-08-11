@@ -46,8 +46,8 @@ const Register: React.FC = () => {
                     <input type="password"/>
                 </div>
                 
-                <button type="submit">Register</button>
-                <p>Yes I have an account? <span onClick={handleLogin}>Login</span></p>
+                <button type="submit" className={styles.buttonForm}>Register</button>
+                <p>Yes I have an account? <button onClick={handleLogin}>Register</button></p>
             </form>
         </section>
         

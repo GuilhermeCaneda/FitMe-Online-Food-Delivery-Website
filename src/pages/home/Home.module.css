@@ -1,0 +1,17 @@
+.content h4 {
+  color: #202020;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding-bottom: 30px;
+  margin: 0 295px;
+}
+.content .restaurantsgallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 130px;
+  gap: 30px;
+}/*# sourceMappingURL=Home.module.css.map */

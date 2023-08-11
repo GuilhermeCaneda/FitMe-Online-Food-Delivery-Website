@@ -27,11 +27,10 @@ const Login: React.FC = () => {
                 <input type="text"/>
                 <h6>Password</h6>
                 <input type="password"/>
-                <p>Don't have any account? <span onClick={handleRegister}>Register</span></p>
-                <button type="submit">Login</button>
+                <p>Don't have any account? <button onClick={handleRegister}>Register</button></p>
+                <button type="submit" className={styles.buttonForm}>Login</button>
             </form>
         </section>
-        
     )
 }
 

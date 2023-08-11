@@ -1,11 +1,16 @@
 import React from 'react';
-import Footer from './pages/footer/Footer';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
+import Home from './pages/home/Home';
+import Restaurant from './pages/restaurant/Restaurant';
+
+
 function App() {
   return (
-    <Footer/>
+    <Restaurant/>
+    /*<Home/>*/
     /*<Login/>
+    <Footer/>
     <Register/>*/
   );
 }

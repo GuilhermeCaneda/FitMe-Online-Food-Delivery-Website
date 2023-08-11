@@ -1,0 +1,93 @@
+.content{
+    max-width: 257px;
+    height: 424px;
+    padding: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    background: #F8F8F8;
+    justify-content: space-around;
+    align-items: center;
+    img{
+        width: 256px;
+        height: 256px;
+        background: lightgray 50% / cover no-repeat;
+        border-radius: 10px;
+    }
+
+    h6{
+        display: flex;
+        flex-flow: row wrap;
+        width: 257px;
+        color: #202020;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+    }
+
+    .rating{
+        display: flex;
+        justify-content: space-between;
+        width: 257px;
+        flex-flow: row nowrap;
+        p{
+            color: #808080;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: lowercase;
+        }
+        div{
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 5px;
+            align-items: center
+            svg{
+                fill: #1AC84B;
+                width: 20.944px;
+                height: 20px;
+                opacity: 0.75;
+            }
+            p{
+                color: #202020;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+
+    .deliverytime{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 5px;
+        align-items: center;
+        svg{
+            width: 20px;
+            height: 17.778px;
+        }
+
+        p{
+            color: #202020;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+
+}
+
+.content:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.10, 1.10);
+    transform-origin: center; 
+}

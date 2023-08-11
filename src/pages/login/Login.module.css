@@ -45,7 +45,7 @@
   align-items: center;
   flex-flow: column nowrap;
   gap: 20px;
-  margin: 0 30vw;
+  margin: 0 34.7vw;
 }
 .loginform h6 {
   color: #202020;
@@ -56,8 +56,8 @@
   margin: 0;
 }
 .loginform input {
-  width: 39.5vw;
-  height: 6vw;
+  width: 29.5vw;
+  height: 4vw;
   border: 2px dashed #FC8019;
   border-radius: 10px;
   font-family: Poppins;
@@ -68,16 +68,18 @@
   font-size: 16px;
   font-weight: 400;
 }
-.loginform p span {
+.loginform p button {
   color: black;
   font-family: Poppins;
   font-size: 16px;
   font-weight: 500;
+  background-color: transparent;
+  border: none;
 }
-.loginform button {
+.loginform .buttonForm {
   display: flex;
-  width: 40vw;
-  height: 6vw;
+  width: 30vw;
+  height: 4vw;
   border-radius: 10px;
   background: #FC8019;
   justify-content: center;

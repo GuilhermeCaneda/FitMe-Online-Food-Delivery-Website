@@ -5,10 +5,11 @@
   background: #FC8019;
 }
 .content .scope {
-  margin-top: 50px;
+  margin: 50px 10.41vw 20px 10.41vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 60px;
 }
 .content .scope figure {
   display: flex;

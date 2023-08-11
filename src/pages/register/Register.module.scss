@@ -102,15 +102,18 @@ $gapForm: 30px;
         font-family: Poppins;
         font-size: 16px;
         font-weight: 400;
-        span{
+
+        button{
             color: black;
             font-family: Poppins;
             font-size: 16px;
             font-weight: 500;
+            background-color: transparent;
+            border: none;
         }
     }
     
-    button{
+    .buttonForm{
         display: flex;
         width: $widthButton;
         height: $heightButton;

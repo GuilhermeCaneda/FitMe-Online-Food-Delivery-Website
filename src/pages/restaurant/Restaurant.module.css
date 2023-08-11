@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  margin: 50px 200px;
+  gap: 68px;
+}
+.content hr {
+  stroke-width: 1px;
+  stroke: #808080;
+  width: 0px;
+  height: 500px;
+}
+.content nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+}
+.content nav li a {
+  display: block;
+  color: #404040;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+.content nav li a:hover {
+  transition: all 0.3s ease;
+  color: #FC8019;
+  transform: scale(1.25, 1.25);
+  transform-origin: center;
+}/*# sourceMappingURL=Restaurant.module.css.map */

@@ -1,0 +1,86 @@
+.content {
+  max-width: 257px;
+  height: 424px;
+  padding: 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+  background: #F8F8F8;
+  justify-content: space-around;
+  align-items: center;
+}
+.content img {
+  width: 256px;
+  height: 256px;
+  background: lightgray 50%/cover no-repeat;
+  border-radius: 10px;
+}
+.content h6 {
+  display: flex;
+  flex-flow: row wrap;
+  width: 257px;
+  color: #202020;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.content .rating {
+  display: flex;
+  justify-content: space-between;
+  width: 257px;
+  flex-flow: row nowrap;
+}
+.content .rating p {
+  color: #808080;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: lowercase;
+}
+.content .rating div {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 5px;
+  align-items: center svg;
+  align-items-fill: #1AC84B;
+  align-items-width: 20.944px;
+  align-items-height: 20px;
+  align-items-opacity: 0.75;
+}
+.content .rating div p {
+  color: #202020;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.content .deliverytime {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 5px;
+  align-items: center;
+}
+.content .deliverytime svg {
+  width: 20px;
+  height: 17.778px;
+}
+.content .deliverytime p {
+  color: #202020;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.content:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.1, 1.1);
+  transform-origin: center;
+}/*# sourceMappingURL=RestaurantCard.module.css.map */

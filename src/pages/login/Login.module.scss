@@ -3,17 +3,17 @@ $Orange: #FC8019;
 $borderRadius: 10px;
 
 $padding: 0 20px;
-$heightInput: 6vw;
-$widthInput: 39.5vw;
+$heightInput: 4vw;//6vw;
+$widthInput: 29.5vw;//39.5vw;
 
-$heightButton: 6vw;
-$widthButton: 40vw;
+$heightButton: 4vw;//6vw;
+$widthButton: 30vw;//40vw;
 
 $marginPage: 50px 200px;
 
 $marginFigure: 40px 0;
 
-$marginForm: 30vw;
+$marginForm: 34.7vw;
 $gapForm: 20px;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono&family=Work+Sans&display=swap');
@@ -90,15 +90,18 @@ $gapForm: 20px;
         font-family: Poppins;
         font-size: 16px;
         font-weight: 400;
-        span{
+        
+        button{
             color: black;
             font-family: Poppins;
             font-size: 16px;
             font-weight: 500;
+            background-color: transparent;
+            border: none;
         }
     }
     
-    button{
+    .buttonForm{
         display: flex;
         width: $widthButton;
         height: $heightButton;
