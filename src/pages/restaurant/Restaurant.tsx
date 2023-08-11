@@ -1,6 +1,7 @@
 import styles from "./Restaurant.module.css";
 import Header from '../../components/Header';
 import RestaurantAbout from "../../components/RestaurantAbout";
+import Cart from "../../components/Cart";
 
 const Restaurant: React.FC = () => {
     return(
@@ -18,12 +19,9 @@ const Restaurant: React.FC = () => {
                         <li><a href="#">Biriyani Box</a></li>
                     </ul>
                 </nav>
-
                 <hr/>
-
-                <div>
-
-                </div>
+                <Cart/>
+                
             </div>
             
         </section>
