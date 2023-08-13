@@ -1,5 +1,5 @@
 import styles from "./RestaurantCard.module.css";
-import images from "../images/food1.jpg";
+import images from "../../images/food1.jpg";
 
 const RestaurantCard: React.FC = () => {
     return(

@@ -1,0 +1,30 @@
+@use '../../values/animations';
+@use '../../values/colors';
+@use '../../values/fonts';
+@use '../../values/styles';
+
+$borderRadius: 10px;
+
+$heightButton: 4vw;//6vw;
+$widthButton: 30vw;//40vw;
+
+$marginPage: 50px 200px;
+
+.content{
+    button{
+        display: flex;
+        width: $widthButton;
+        height: $heightButton;
+        border-radius: $borderRadius;
+        background: orange;
+        justify-content: center;
+        align-items: center;
+        border: 2px orange;
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}

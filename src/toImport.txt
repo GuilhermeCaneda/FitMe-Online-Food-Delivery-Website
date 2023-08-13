@@ -1,0 +1,6 @@
+@use '../../values/_animations';
+@use '../../values/_colors';
+@use '../../values/_fonts';
+@use '../../values/_styles';
+
+https://www.figma.com/file/ZietNBdXT7ghq2xksDmipM/FitMe---Online-Food-Delivery-Website?type=design&node-id=1-2&mode=design&t=BhlGwdcne3byfhss-0

@@ -1,0 +1,32 @@
+@use '../../values/animations';
+@use '../../values/colors';
+@use '../../values/fonts';
+@use '../../values/styles';
+
+$marginFigure: 40px 0;
+
+.content{
+    margin: $marginFigure;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+    svg{
+        fill: orange;
+        width: 23.065px;
+        height: 20.886px;
+        flex-shrink: 0;
+        margin: 0;
+        padding-top: 5px;
+    }
+    h5{
+        margin: 0;
+        padding: 0;
+        color: #202020;
+        font-family: Poppins;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}

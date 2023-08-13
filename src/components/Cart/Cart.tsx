@@ -1,4 +1,4 @@
-import CartItem from "./CartItem";
+import CartItem from "../CartItem/CartItem";
 import styles from "./Cart.module.css";
 const Cart: React.FC = () => {
     return(

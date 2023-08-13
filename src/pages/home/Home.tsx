@@ -1,6 +1,6 @@
 import styles from "./Home.module.css";
-import Header from '../../components/Header';
-import RestaurantCard from "../../components/RestaurantCard";
+import Header from '../../components/Header/Header';
+import RestaurantCard from "../../components/RestaurantCard/RestaurantCard";
 
 
 const Home: React.FC = () => {

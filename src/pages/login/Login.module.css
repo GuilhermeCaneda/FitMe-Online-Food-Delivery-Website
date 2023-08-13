@@ -3,31 +3,6 @@
   margin: 50px 200px;
   border-bottom: 1px solid #808080;
 }
-.titlepage figure {
-  margin: 40px 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  gap: 10px;
-}
-.titlepage figure svg {
-  fill: #FC8019;
-  width: 23.065px;
-  height: 20.886px;
-  flex-shrink: 0;
-  margin: 0;
-  padding-top: 5px;
-}
-.titlepage figure h5 {
-  margin: 0;
-  padding: 0;
-  color: #202020;
-  font-family: Poppins;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
 .titlepage h6 {
   color: black;
   font-family: Poppins;
@@ -47,21 +22,6 @@
   gap: 20px;
   margin: 0 34.7vw;
 }
-.loginform h6 {
-  color: #202020;
-  font-family: Poppins;
-  font-weight: 600;
-  font-size: 24px;
-  align-self: flex-start;
-  margin: 0;
-}
-.loginform input {
-  width: 29.5vw;
-  height: 4vw;
-  border: 2px dashed #FC8019;
-  border-radius: 10px;
-  font-family: Poppins;
-}
 .loginform p {
   color: black;
   font-family: Poppins;
@@ -75,20 +35,4 @@
   font-weight: 500;
   background-color: transparent;
   border: none;
-}
-.loginform .buttonForm {
-  display: flex;
-  width: 30vw;
-  height: 4vw;
-  border-radius: 10px;
-  background: #FC8019;
-  justify-content: center;
-  align-items: center;
-  border: 2px #FC8019;
-  color: #FFF;
-  font-family: Poppins;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }/*# sourceMappingURL=Login.module.css.map */

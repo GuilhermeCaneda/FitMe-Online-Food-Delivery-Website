@@ -7,11 +7,11 @@ import Restaurant from './pages/restaurant/Restaurant';
 
 function App() {
   return (
-    <Restaurant/>
+    /*<Restaurant/>*/
     /*<Home/>*/
-    /*<Login/>
-    <Footer/>
-    <Register/>*/
+    /*<Login/>*/
+    /*<Footer/>*/
+    <Register/>
   );
 }
 
