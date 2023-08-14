@@ -6,6 +6,7 @@
 $marginFigure: 40px 0;
 
 .content{
+    cursor: pointer;
     margin: $marginFigure;
     display: flex;
     flex-flow: row nowrap;

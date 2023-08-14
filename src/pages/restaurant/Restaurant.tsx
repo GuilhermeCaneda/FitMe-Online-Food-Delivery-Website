@@ -3,6 +3,8 @@ import Header from '../../components/Header/Header';
 import RestaurantAbout from "../../components/RestaurantAbout/RestaurantAbout";
 import Cart from "../../components/Cart/Cart";
 
+
+
 const Restaurant: React.FC = () => {
     return(
         <section>

@@ -5,6 +5,7 @@
   flex-flow: column nowrap;
   gap: 30px;
   margin: 0 34.7vw;
+  width: 30vw;
 }
 .loginform p {
   color: black;

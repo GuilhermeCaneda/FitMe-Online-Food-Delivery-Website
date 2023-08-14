@@ -6,11 +6,12 @@
 $borderRadius: 10px;
 
 $heightButton: 4vw;//6vw;
-$widthButton: 30vw;//40vw;
+$widthButton: 100%;//30vw;//40vw;
 
 $marginPage: 50px 200px;
 
 .content{
+    width: $widthButton;
     button{
         display: flex;
         width: $widthButton;

@@ -1,6 +1,6 @@
 $marginForm: 34.7vw;
 $gapForm: 30px;
-
+$width: 30vw;
 .loginform{
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@ $gapForm: 30px;
     flex-flow: column nowrap;
     gap: $gapForm;
     margin: 0 $marginForm;
-
+    width: $width;
     p{
         color: black;
         font-family: Poppins;
