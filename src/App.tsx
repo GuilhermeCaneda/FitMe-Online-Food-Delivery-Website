@@ -1,17 +1,16 @@
 import React from 'react';
-import Login from './pages/login/Login';
-import Register from './pages/register/Register';
-import Home from './pages/home/Home';
-import Restaurant from './pages/restaurant/Restaurant';
+
+import {Outlet} from "react-router-dom";
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 
 function App() {
   return (
-    /*<Restaurant/>*/
-    /*<Home/>*/
-    /*<Login/>*/
-    /*<Footer/>*/
-    <Register/>
+    <div>
+      <Outlet/>
+      <Footer/>
+    </div>
   );
 }
 

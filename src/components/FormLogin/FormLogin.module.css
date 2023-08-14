@@ -1,0 +1,22 @@
+.loginform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 30px;
+  margin: 0 34.7vw;
+}
+.loginform p {
+  color: black;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+}
+.loginform p button {
+  color: black;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+}/*# sourceMappingURL=FormLogin.module.css.map */

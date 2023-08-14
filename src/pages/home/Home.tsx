@@ -7,12 +7,8 @@ const Home: React.FC = () => {
     return(
         <section className={styles.content}>
             <Header/>
-
-
             <h4>Restaurants</h4>
             <div className={styles.restaurantsgallery}>
-                <RestaurantCard/>
-                <RestaurantCard/>
                 <RestaurantCard/>
                 <RestaurantCard/>
                 <RestaurantCard/>

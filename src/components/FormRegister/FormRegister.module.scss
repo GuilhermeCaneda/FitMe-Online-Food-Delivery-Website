@@ -1,0 +1,27 @@
+$marginForm: 34.7vw;
+$gapForm: 30px;
+
+.loginform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: $gapForm;
+    margin: 0 $marginForm;
+
+    p{
+        color: black;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+
+        button{
+            color: black;
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: transparent;
+            border: none;
+        }
+    }
+}

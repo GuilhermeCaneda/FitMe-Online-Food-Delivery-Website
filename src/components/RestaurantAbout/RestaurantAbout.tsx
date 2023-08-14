@@ -1,4 +1,4 @@
-import images from "../images/food1.jpg";
+import images from "../../images/food1.jpg";
 import styles from "./RestaurantAbout.module.css";
 
 const RestaurantAbout: React.FC = () => {

@@ -1,9 +1,19 @@
 import styles from "./RestaurantCard.module.css";
 import images from "../../images/food1.jpg";
 
+import {useNavigate} from "react-router-dom";
+
+
 const RestaurantCard: React.FC = () => {
+
+    const navigate = useNavigate();
+
+    const handleRestaurantPage = () => {
+        navigate('/restaurant');
+    }
+
     return(
-        <div className={styles.content}>
+        <div className={styles.content} onClick={handleRestaurantPage}>
             <img src={images}/>
             <h6>Ramachandra Parlour</h6>
             <div className={styles.rating}>

@@ -1,11 +1,10 @@
 import styles from "./Header.module.css"
 import Logo from "../Logo/Logo";
 
-const Header: React.FC = () => {
+import {Link} from 'react-router-dom';
 
-    const handleRegister = () => {
-        return;
-    }
+
+const Header: React.FC = () => {
 
     return (
         <header className={styles.content}>
@@ -19,7 +18,7 @@ const Header: React.FC = () => {
                     <rect x="5.28577" y="10.0714" width="18.3571" height="18.3571" rx="3.6" stroke="#202020" stroke-width="2"/>
                 </svg>
                 
-                <button onClick={handleRegister}>Sign In</button>
+                <Link to={"/register"}><button>Sign In</button></Link>
             </div>
         </header>
     )
