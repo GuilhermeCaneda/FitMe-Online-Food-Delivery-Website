@@ -4,7 +4,7 @@ import FormLogin from "../../components/FormLogin/FormLogin";
 
 const Login: React.FC = () => {
     return (
-        <section>
+        <section className={styles.content}>
             <div className={styles.titlepage}>
                 <Logo/>
                 <h6>Login</h6>

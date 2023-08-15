@@ -1,33 +1,23 @@
-@use '../../values/animations';
-@use '../../values/colors';
-@use '../../values/fonts';
-@use '../../values/styles';
-
-$marginFigure: 40px 0;
+@use '../../values/variables';
 
 .content{
     cursor: pointer;
-    margin: $marginFigure;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    gap: 10px;
+    @include variables.defaultFlexRow(flex-start, center);
+    
+    gap: 1em;
+    padding-top: variables.$paddingTopPage;
     svg{
-        fill: orange;
-        width: 23.065px;
-        height: 20.886px;
-        flex-shrink: 0;
-        margin: 0;
-        padding-top: 5px;
+        fill: variables.$orangeColor;
+        width: 2.3em;
+        height: 2.1em;
     }
     h5{
-        margin: 0;
-        padding: 0;
-        color: #202020;
-        font-family: Poppins;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+        color: variables.$blackColor;
+        font-size: 2.8em;
+        font-weight: 800;
+        padding-top: 0.2em;
     }
+}
+.content:hover{
+    @include variables.defaultHover();
 }

@@ -1,102 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono&family=Work+Sans&display=swap');
+@use '../../values/variables';
 
 .content{
-    cursor: pointer;
-    width: 100vw;
-    height: 15vw;
-    background: #FC8019; 
+    @include variables.defaultFlexColumn(none, center);
+    background: variables.$orangeColor;
+    width: variables.$contentWidth;
+    padding: 6em 0;
+    gap: 2em;
+
     .scope{
-        margin: 50px 10.41vw 20px 10.41vw ;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 60px;
+        @include variables.defaultFlexRow(space-between, center);
+        width: variables.$contentAut;
+        padding-top: 1em;
         a{
             text-decoration: none;
             figure{
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: flex-start;
-                gap: 10px;
-                margin: 0;
+                @include variables.defaultFlexRow(flex-start, none);
+                
+                gap: 1em;
+                cursor: pointer;
                 svg{
-                    fill: #FC8019;
-                    margin: 0;
-                    padding-top: 5px;
+                    width: 2.3em; 
+                    height: 2.1em;
+                    fill: white;
+                    padding-top: 0.5em;
                 }
                 h5{
                     color: #FFF;
-                    font-family: Poppins;
-                    font-size: 28px;
-                    font-style: normal;
+                    font-size: 2.8em;
                     font-weight: 800;
-                    line-height: normal;
-                    text-align: center;
-                    margin: 0;
-                    padding: 0;
                 }
+            }
+            figure:hover{
+                @include variables.defaultHover();
             }
         }
         
-
         nav{
             ul{
                 list-style-type: none;
-                display: flex;
-                justify-content: center;
-                gap: 70px;
-                padding: 0;
+                @include variables.defaultFlexRow(center, none);
+                gap: 7em;
             }
             li{
                 a{
                     display: inline-block;
                     color: #FFF;
-                    font-family: Poppins;
-                    font-size: 16px;
-                    font-style: normal;
+                    font-size: 1.6em;
                     font-weight: 500;
-                    line-height: normal;
                     text-decoration: none;
-                    
                 }
                 a:hover{
-                    transition: all 0.3s ease;
-                    color: #e2e2e2;
-                    transform: scale(1.5, 1.50);
-                    transform-origin: center; 
+                    @include variables.defaultHover();
                 }
             }
         }
 
         .contact{
             color: #FFF;
-            font-family: Poppins;
-            font-size: 14px;
-            font-style: normal;
+            font-size: 1.5em;
             font-weight: 500;
-            line-height: normal;
             span{
                 color: #FFF;
-                font-family: Poppins;
-                font-size: 16px;
-                font-style: normal;
+                font-size: 1.1em;
                 font-weight: 700;
-                line-height: normal;
             }
         }
     }
     
     .mediasocials{
-        display: flex;
-        justify-content: center;
-        flex-flow: row nowrap;
-        gap: 20px;
-
+        @include variables.defaultFlexRow(center, center);
+        gap: 2em;
         svg{
-            /*width: 22px;
-            height: 22px;*/
-            padding: 0;
-            margin: 0;
+            width: 2.2em;
+            height: 2.2em;
+            stroke: white;
+            
+            fill: white;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            cursor: pointer;
+        }
+        svg:hover{
+            @include variables.defaultHover();
         }
     }
 }

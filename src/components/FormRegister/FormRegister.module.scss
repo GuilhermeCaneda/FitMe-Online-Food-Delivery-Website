@@ -1,27 +1,29 @@
-$marginForm: 34.7vw;
-$gapForm: 30px;
-$width: 30vw;
-.loginform{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    gap: $gapForm;
-    margin: 0 $marginForm;
-    width: $width;
-    p{
-        color: black;
-        font-family: Poppins;
-        font-size: 16px;
-        font-weight: 400;
+@use '../../values/variables';
 
-        button{
-            color: black;
-            font-family: Poppins;
-            font-size: 16px;
-            font-weight: 500;
-            background-color: transparent;
-            border: none;
+.content{
+    width: variables.$contentWidth;
+    @include variables.defaultFlexColumn(center, center);
+    
+    .registerform{
+        @include variables.defaultFlexColumn(center, center);
+        padding-top: 5em;
+        gap: 3em;
+        width: variables.$contentForm;
+        p{
+            color: variables.$blackColor;
+            font-size: 1.6em;
+            font-weight: 400;
+            button{
+                color: black;
+                font-size: 1.1em;
+                font-weight: 500;
+                background-color: transparent;
+                border: none;
+                
+            }
+            button:hover{
+                @include variables.smallHover();
+            }
         }
     }
 }

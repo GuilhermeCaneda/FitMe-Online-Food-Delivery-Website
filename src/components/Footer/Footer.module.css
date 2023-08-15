@@ -1,91 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono&family=Work+Sans&display=swap");
+/*Global*/
+/*Called in Logo.css*/
+/*Login and Register*/
+/*Width*/
+/*Width*/
+* {
+  font-size: 10px;
+  font-family: Poppins;
+}
+
 .content {
-  cursor: pointer;
-  width: 100vw;
-  height: 15vw;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-flow: column nowrap;
   background: #FC8019;
+  width: 100vw;
+  padding: 6em 0;
+  gap: 2em;
 }
 .content .scope {
-  margin: 50px 10.41vw 20px 10.41vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
+  flex-flow: row nowrap;
+  width: 130em;
+  padding-top: 1em;
 }
 .content .scope a {
   text-decoration: none;
 }
 .content .scope a figure {
   display: flex;
-  flex-flow: row nowrap;
   justify-content: flex-start;
-  gap: 10px;
-  margin: 0;
+  align-items: none;
+  flex-flow: row nowrap;
+  gap: 1em;
+  cursor: pointer;
 }
 .content .scope a figure svg {
-  fill: #FC8019;
-  margin: 0;
-  padding-top: 5px;
+  width: 2.3em;
+  height: 2.1em;
+  fill: white;
+  padding-top: 0.5em;
 }
 .content .scope a figure h5 {
   color: #FFF;
-  font-family: Poppins;
-  font-size: 28px;
-  font-style: normal;
+  font-size: 2.8em;
   font-weight: 800;
-  line-height: normal;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+}
+.content .scope a figure:hover {
+  transition: all 0.3s ease;
+  opacity: 1.5;
+  transform: scale(1.1, 1.1);
+  transform-origin: center;
+  cursor: pointer;
 }
 .content .scope nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 70px;
-  padding: 0;
+  align-items: none;
+  flex-flow: row nowrap;
+  gap: 7em;
 }
 .content .scope nav li a {
   display: inline-block;
   color: #FFF;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1.6em;
   font-weight: 500;
-  line-height: normal;
   text-decoration: none;
 }
 .content .scope nav li a:hover {
   transition: all 0.3s ease;
-  color: #e2e2e2;
-  transform: scale(1.5, 1.5);
+  opacity: 1.5;
+  transform: scale(1.1, 1.1);
   transform-origin: center;
+  cursor: pointer;
 }
 .content .scope .contact {
   color: #FFF;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
+  font-size: 1.5em;
   font-weight: 500;
-  line-height: normal;
 }
 .content .scope .contact span {
   color: #FFF;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1.1em;
   font-weight: 700;
-  line-height: normal;
 }
 .content .mediasocials {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row nowrap;
-  gap: 20px;
+  gap: 2em;
 }
 .content .mediasocials svg {
-  /*width: 22px;
-  height: 22px;*/
-  padding: 0;
-  margin: 0;
+  width: 2.2em;
+  height: 2.2em;
+  stroke: white;
+  fill: white;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+}
+.content .mediasocials svg:hover {
+  transition: all 0.3s ease;
+  opacity: 1.5;
+  transform: scale(1.1, 1.1);
+  transform-origin: center;
+  cursor: pointer;
 }/*# sourceMappingURL=Footer.module.css.map */

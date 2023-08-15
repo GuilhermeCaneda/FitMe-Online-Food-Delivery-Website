@@ -16,12 +16,15 @@ const FormLogin = () => {
     }
     
     return (
-        <form className={styles.loginform} onSubmit={handleSubmit}>
-            <FormField label="Username" type="text"/>
-            <FormField label="Password" type="password"/>
-            <p>Don't have any account? <button onClick={handleRegister}>Register</button></p>
-            <FormButton text="Login"/>
-        </form>
+        <div className={styles.content}>
+            <form className={styles.loginform} onSubmit={handleSubmit}>
+                <FormField label="Username" type="text"/>
+                <FormField label="Password" type="password"/>
+                <p>Don't have any account? <button onClick={handleRegister}>Register</button></p>
+                <FormButton text="Login"/>
+            </form>
+        </div>
+        
     )
 }
 

@@ -1,27 +1,26 @@
-@use '../../values/animations';
-@use '../../values/colors';
-@use '../../values/fonts';
-@use '../../values/styles';
-
-$borderRadius: 10px;
-$heightInput: 4vw;
-$widthInput: 29.5vw;
+@use '../../values/variables';
 
 .content{
+    width: 100%;
+    @include variables.defaultFlexColumn(none, center);
+    gap: 1em;
     label{
-        color: black;
-        font-family: Poppins;
-        font-weight: 600;
-        font-size: 24px;
         align-self: flex-start;
-        margin: 0;
+        color: variables.$blackColor;
+        font-weight: 600;
+        font-size: 2.4em;
     }
-    
     input{
-        width: $widthInput;
-        height: $heightInput;
-        border: 2px dashed orange;
-        border-radius: $borderRadius;
-        font-family: Poppins;
+        height: 0.2em;/*3.2em;*/
+        width: 85.5%;/*91%;*/
+        border: 0.15em dashed variables.$orangeColor;
+        border-radius: 0.7em;
+        padding: 2em;
+        font-size: 2em;
+        outline: none;
+    }
+    input:focus{
+        border: 0.15em solid variables.$orangeColor;
+        @include variables.smallHover();
     }
 }

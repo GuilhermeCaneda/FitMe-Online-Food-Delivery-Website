@@ -4,7 +4,7 @@ import FormRegister from "../../components/FormRegister/FormRegister";
 
 const Register: React.FC = () => {
     return (
-        <section>
+        <section className={styles.content}>
             <div className={styles.titlepage}>
                 <Logo/>
                 <h6>Register</h6>

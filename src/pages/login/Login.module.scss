@@ -1,34 +1,26 @@
-@use '../../values/_colors';
-@use '../../values/_fonts';
-@use '../../values/_styles';
+@use '../../values/variables';
 
-$borderRadius: 10px;
-
-$padding: 0 20px;
-$heightInput: 4vw;//6vw;
-$widthInput: 29.5vw;//39.5vw;
-
-$heightButton: 4vw;//6vw;
-$widthButton: 30vw;//40vw;
-
-$marginPage: 50px 200px;
-
-$marginForm: 34.7vw;
-$gapForm: 20px;
-
-
-.titlepage{
-    margin: $marginPage;
-    h6{
-        color: black;
-        font-family: Poppins;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        margin: 0;
-        padding: 8px 12px;
+.content{
+    @include variables.defaultFlexColumn(none, center);
+    width: variables.$contentWidth;
+    padding-bottom: variables.$paddingBotPage;
+    .titlepage{
+        @include variables.defaultFlexColumn(none, flex-start);
+        width: variables.$contentAut;
+        gap: 7em;
+        h6{
+            color: variables.$blackColor;
+            font-weight: 600;
+            font-size: 2.4em;
+        }
+        padding-left: 0.4em;
+        padding-bottom: 1em;
+        border-bottom: 0.1em solid #808080;
     }
-    
-    border-bottom: 1px solid #808080;
 }
+
+/*@media (max-width: 1315px) {
+    *{
+        font-size: 4px;
+    }
+}*/

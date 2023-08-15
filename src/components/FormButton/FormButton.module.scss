@@ -1,31 +1,20 @@
-@use '../../values/animations';
-@use '../../values/colors';
-@use '../../values/fonts';
-@use '../../values/styles';
-
-$borderRadius: 10px;
-
-$heightButton: 4vw;//6vw;
-$widthButton: 100%;//30vw;//40vw;
-
-$marginPage: 50px 200px;
+@use '../../values/variables';
 
 .content{
-    width: $widthButton;
+    width: 100%;
     button{
-        display: flex;
-        width: $widthButton;
-        height: $heightButton;
-        border-radius: $borderRadius;
-        background: orange;
-        justify-content: center;
-        align-items: center;
-        border: 2px orange;
+        @include variables.defaultFlexColumn(center, center);
+        background: variables.$orangeColor;
+        width: 100%;
+        height: 3.3em;
+        border: 0.2rem variables.$orangeColor;
+        border-radius: 0.5em;
+
         color: #FFF;
-        font-family: Poppins;
-        font-size: 1.5rem;
-        font-style: normal;
+        font-size: 2.4em;
         font-weight: 500;
-        line-height: normal;
+    }
+    button:hover{
+        @include variables.smallHover();
     }
 }
