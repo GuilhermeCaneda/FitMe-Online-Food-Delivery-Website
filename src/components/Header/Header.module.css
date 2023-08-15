@@ -1,68 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono&family=Work+Sans&display=swap");
+/*Global*/
+/*Called in Logo.css*/
+/*Home*/
+/*Footer*/
+/*Login and Register*/
+/*Width*/
+/*Width*/
 * {
-  margin: 0;
-  padding: 0;
+  font-size: 10px;
+  font-family: Poppins;
 }
 
 .content {
+  width: 100vw;
+  padding-top: 4em;
+  padding-bottom: 8em;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-flow: row nowrap;
+}
+.content .subcontent {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 60px 200px 200px 200px;
-}
-.content figure {
-  margin: 40px 0;
-  display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
+  width: 152.5em;
 }
-.content figure svg {
-  fill: #FC8019;
-  width: 24px;
-  height: 22px;
-  padding-top: 5px;
-}
-.content figure h5 {
-  margin: 0;
-  padding: 0;
-  color: #202020;
-  font-family: Poppins;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.content div {
+.content .subcontent .features {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 25px;
+  flex-flow: row nowrap;
+  gap: 2.5em;
 }
-.content div input {
-  width: 450px;
-  padding: 15px 25px;
-  border-radius: 10px;
-  border: 1px solid #808080;
+.content .subcontent .features input {
+  width: 28.125em;
+  padding: 0.9375em 1.5625em;
+  border-radius: 0.625em;
+  border: 0.0625em solid #808080;
+  background: transparent;
   opacity: 0.75;
-  background: #FFF;
   justify-content: space-between;
   align-items: center;
   color: #808080;
-  font-family: Poppins;
-  font-size: 16px;
   font-weight: 500;
+  font-size: 1.6em;
+  outline: none;
 }
-.content div button {
-  padding: 16px 25px;
+.content .subcontent .features input:hover {
+  transition: all 0.3s ease;
+  opacity: 1.5;
+  transform: scale(1.01, 1.01);
+  transform-origin: center;
+  cursor: pointer;
+}
+.content .subcontent .features svg {
+  width: 3em;
+  height: 3.1em;
+  fill: none;
+}
+.content .subcontent .features svg rect {
+  width: 1.83571em;
+  height: 1.83571em;
+  stroke: #202020;
+  stroke-width: 2;
+}
+.content .subcontent .features button {
+  padding: 1.6em 2.5em;
   background: #202020;
-  justify-content: center;
-  border-radius: 10px;
-  background: #202020;
+  border-radius: 1em;
   color: #FDFBFA;
-  font-family: Poppins;
-  font-size: 14px;
+  font-size: 1.4em;
   font-weight: 600;
+}
+.content .subcontent .features button:hover {
+  border-color: transparent;
+  transition: all 0.3s ease;
+  opacity: 1.5;
+  transform-origin: center;
+  background-color: #FC8019;
 }/*# sourceMappingURL=Header.module.css.map */

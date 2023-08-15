@@ -3,6 +3,7 @@
 .content{
     @include variables.defaultFlexColumn(none, center);
     width: variables.$contentWidth;
+    padding-top: variables.$paddingTopPage;
     padding-bottom: variables.$paddingBotPage;
     .titlepage{
         @include variables.defaultFlexColumn(none, flex-start);

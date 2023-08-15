@@ -1,17 +1,39 @@
-.content h4 {
-  color: #202020;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono&family=Work+Sans&display=swap");
+/*Global*/
+/*Called in Logo.css*/
+/*Home*/
+/*Footer*/
+/*Login and Register*/
+/*Width*/
+/*Width*/
+* {
+  font-size: 10px;
   font-family: Poppins;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  padding-bottom: 30px;
-  margin: 0 295px;
 }
-.content .restaurantsgallery {
+
+.content {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
-  margin: 0 130px;
-  gap: 30px;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 100vw;
+}
+.content .subcontent {
+  width: 130em;
+}
+.content .subcontent h4 {
+  justify-self: flex-start;
+  color: #202020;
+  font-size: 2.4em;
+  font-weight: 500;
+}
+.content .subcontent .restaurantsgallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding: 4em 0;
+  flex-flow: row wrap;
+  gap: 2.4em;
 }/*# sourceMappingURL=Home.module.css.map */

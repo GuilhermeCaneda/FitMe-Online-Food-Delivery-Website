@@ -5,3 +5,11 @@ width: variables.$contentWidth;
 
 
 @include variables.defaultFlexColumn(none, center);
+
+
+@mixin pContent($weight){
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: $weight;
+}

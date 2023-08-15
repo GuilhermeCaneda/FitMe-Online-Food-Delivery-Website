@@ -3,13 +3,20 @@
 $orangeColor: #FC8019;
 $blackColor: #202020;
 
+
 /*Global*/
 $contentWidth: 100vw;
 $paddingTopPage: 4em; /*Called in Logo.css*/
 $paddingBotPage: 12em;
 
+/*Home*/
+$contentWidthHome: 130em;
+
+/*Footer*/
+$contentFooterWidth: 145em; 
+
 /*Login and Register*/
-$contentAut: 130em; /*Width*/
+$contentAut: 152.5em; /*Width*/
 $contentForm: 60em; /*Width*/
 
 *{
@@ -45,4 +52,12 @@ $contentForm: 60em; /*Width*/
     transform: scale(1.01, 1.01);
     transform-origin: center; 
     cursor: pointer;
+}
+
+@mixin colorHover($color){
+    border-color: transparent;
+    transition: all 0.3s ease;
+    opacity: 1.5;
+    transform-origin: center; 
+    background-color: $color;
 }

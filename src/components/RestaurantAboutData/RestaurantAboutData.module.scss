@@ -1,0 +1,39 @@
+@use '../../values/variables';
+
+.content{
+    @include variables.defaultFlexColumn(center, flex-start);
+    gap: 1em;
+    h3{
+        color: #FFF;
+        font-size: 3.2em;
+        font-weight: 600;
+    }
+    p{
+        font-size: 1.6em;
+        color: #FFF;
+        font-weight: 400;
+    }
+
+    div{
+        @include variables.defaultFlexRow(space-between, none);
+        div{
+            @include variables.defaultFlexColumn(space-between, flex-start);
+            gap: 1em;
+            hr{
+                stroke-width: 0.1em;
+                stroke: #FFF;
+                width: 0em;
+                height: 5em;
+            }
+            div{
+                @include variables.defaultFlexRow(flex-start, center);
+                svg{
+                    width: 2.1em;
+                    opacity: 0.75;
+                    height: 2em;
+                }
+            }
+        }
+        
+    }
+}

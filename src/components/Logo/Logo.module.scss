@@ -3,9 +3,7 @@
 .content{
     cursor: pointer;
     @include variables.defaultFlexRow(flex-start, center);
-    
     gap: 1em;
-    padding-top: variables.$paddingTopPage;
     svg{
         fill: variables.$orangeColor;
         width: 2.3em;

@@ -8,18 +8,20 @@ const Header: React.FC = () => {
 
     return (
         <header className={styles.content}>
-            <Logo/>
-
-            <div>
-                <input type="text" placeholder="Enter item or restaurant you are looking for"></input>
-                
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 30 31" fill="none">
-                    <path d="M19.2857 14.4285V7.88092C19.2857 6.49169 18.7777 5.15936 17.8735 4.17702C16.9693 3.19469 15.743 2.64282 14.4643 2.64282C13.1855 2.64282 11.9592 3.19469 11.055 4.17702C10.1508 5.15936 9.64282 6.49169 9.64282 7.88092V14.4285" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <rect x="5.28577" y="10.0714" width="18.3571" height="18.3571" rx="3.6" stroke="#202020" stroke-width="2"/>
-                </svg>
-                
-                <Link to={"/register"}><button>Sign In</button></Link>
+            <div className={styles.subcontent}>
+                <Logo/>
+                <div className={styles.features}>
+                    <input type="text" placeholder="Enter item or restaurant you are looking for"></input>
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M19.2857 14.4285V7.88092C19.2857 6.49169 18.7777 5.15936 17.8735 4.17702C16.9693 3.19469 15.743 2.64282 14.4643 2.64282C13.1855 2.64282 11.9592 3.19469 11.055 4.17702C10.1508 5.15936 9.64282 6.49169 9.64282 7.88092V14.4285" stroke="#202020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="5.28577" y="10.0714"  rx="3.6"/>
+                    </svg>
+                    
+                    <Link to={"/register"}><button>Sign In</button></Link>
+                </div>
             </div>
+            
         </header>
     )
 }
