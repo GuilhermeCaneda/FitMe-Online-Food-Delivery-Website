@@ -1,0 +1,56 @@
+@use '../../values/variables';
+
+.content{
+    width: 75em;
+    height: 18.4em;
+    @include variables.defaultFlexRow(space-between, center);
+    .describe{
+        @include variables.defaultFlexColumn(center, flex-start);
+        width: 51.1em;
+        gap: 2em;
+
+        h5{
+            color: variables.$blackColor;
+            font-size: 2em;
+            font-weight: 500;
+        }
+        h6{
+            color: #000;
+            font-size: 1.6em;
+            font-weight: 500;
+        }
+        p{
+            color: variables.$grayColor;
+            font-size: 1.5em;
+            line-height: 1.4em;
+        }
+    }
+    figure{
+        width: 16em;
+        height: 18.4em;
+        display: flex;
+        flex-direction: column;
+        img{
+            width: 16em;
+            height: 16em;
+            border-radius: 1em;
+            background:lightgray 50% / cover no-repeat;
+        }
+        .add{
+        
+        
+            padding: 0.9375em 1.5625em;
+            border-radius: 0.625em;
+            border-color: transparent;
+            box-shadow: 0em 0.25em 1.25em 0em rgba(0, 0, 0, 0.10);
+            background: #FFF;
+
+            color: #1AC84B;
+            font-size: 1.6em;
+        }
+        
+        button:hover{
+            @include variables.defaultHover();
+        }
+    }
+}

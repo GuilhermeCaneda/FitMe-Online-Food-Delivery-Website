@@ -14,38 +14,55 @@
 .content {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-flow: row nowrap;
-  margin: 50px 200px;
-  gap: 68px;
+  width: 99vw;
+  padding: 8em 0;
 }
-.content hr {
-  stroke-width: 1px;
-  stroke: #808080;
-  width: 0px;
-  height: 500px;
-}
-.content nav ul {
-  list-style-type: none;
+.content .subcontent {
+  width: 152.5em;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  padding: 0;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  gap: 6.8em;
 }
-.content nav li a {
+.content .subcontent .dishgallery {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 3em;
+  max-height: 66em;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.content .subcontent hr {
+  stroke-width: 0.1em;
+  stroke: #808080;
+  width: 0em;
+  height: 50em;
+}
+.content .subcontent nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: column nowrap;
+  list-style-type: none;
+  gap: 1em;
+}
+.content .subcontent nav li a {
   display: block;
-  color: #404040;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
+  color: #808080;
+  font-size: 1.6em;
   font-weight: 500;
-  line-height: normal;
   text-decoration: none;
 }
-.content nav li a:hover {
+.content .subcontent nav li a:hover {
   transition: all 0.3s ease;
-  color: #FC8019;
-  transform: scale(1.25, 1.25);
+  opacity: 1.5;
+  transform: scale(1.1, 1.1);
   transform-origin: center;
+  cursor: pointer;
+  color: #FC8019;
 }/*# sourceMappingURL=Restaurant.module.css.map */

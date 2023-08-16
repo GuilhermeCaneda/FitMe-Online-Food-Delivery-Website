@@ -12,6 +12,8 @@
 }
 
 .content {
+  width: 54.9em;
+  height: 14.5em;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -28,32 +30,33 @@
   color: #FFF;
   font-weight: 400;
 }
-.content div {
+.content .subcontent {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: none;
   flex-flow: row nowrap;
 }
-.content div div {
+.content .subcontent div {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: none;
   flex-flow: column nowrap;
   gap: 1em;
 }
-.content div div hr {
+.content .subcontent div hr {
   stroke-width: 0.1em;
   stroke: #FFF;
   width: 0em;
   height: 5em;
 }
-.content div div div {
+.content .subcontent div div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-flow: row nowrap;
 }
-.content div div div svg {
+.content .subcontent div div svg {
   width: 2.1em;
   opacity: 0.75;
   height: 2em;

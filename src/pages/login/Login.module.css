@@ -16,7 +16,7 @@
   justify-content: none;
   align-items: center;
   flex-flow: column nowrap;
-  width: 100vw;
+  width: 99vw;
   padding-top: 4em;
   padding-bottom: 12em;
 }

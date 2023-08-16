@@ -1,7 +1,7 @@
 @use '../../values/variables';
 
 .content{
-    @include variables.defaultFlexRow(space-between, flex-end);
+    @include variables.defaultFlexRow(space-between, center);
     background: variables.$blackColor;
     max-width: variables.$contentWidth;
     padding: 2.5em 20em;
@@ -11,11 +11,10 @@
         border-radius: 1em;
         background:lightgray 50% / cover no-repeat;
     }
-
-    
-
     
     .offers{
+        justify-self: flex-end;
+        align-self: flex-end;
         @include variables.defaultFlexColumn(center, flex-start);
         width: 33.2em;
         height: 12.4em;

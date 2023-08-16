@@ -1,46 +1,50 @@
 @use '../../values/variables';
 .content{
-    display: flex;
-    justify-content: center;
-    flex-flow: row nowrap;
-    margin: 50px 200px;
-    gap: 68px;
+    @include variables.defaultFlexRow(center, flex-start);
+    width: variables.$contentWidth;
+    padding: 8em 0;
+    
+    
+    .subcontent{
+        width: variables.$contentAut;
+        @include variables.defaultFlexRow(flex-end, flex-start);
+        gap: 6.8em;
 
-    hr{
-        stroke-width: 1px;
-        stroke: #808080;
-        width: 0px;
-        height: 500px;
-    }
+        .dishgallery{
+            @include variables.defaultFlexColumn(flex-start, center);
+            gap: 3em;
+            max-height: 66em;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
 
-    nav{
-        ul{
-            list-style-type: none;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            padding: 0;
+        hr{
+            stroke-width: 0.1em;
+            stroke: variables.$grayColor;
+            width: 0em;
+            height: 50em;
         }
-        li{
-            a{
-                display: block;
-                color: #404040;
-                font-family: Poppins;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                text-decoration: none;
-                
+    
+        nav{
+            ul{
+                @include variables.defaultFlexColumn(center, flex-end);
+                list-style-type: none;
+                gap: 1em;
             }
-            a:hover{
-                transition: all 0.3s ease;
-                color: #FC8019;
-                transform: scale(1.25, 1.25);
-                transform-origin: center; 
+            li{
+                a{
+                    display: block;
+                    color: variables.$grayColor;
+                    font-size: 1.6em;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+                a:hover{
+                    @include variables.defaultHover();
+                    color: variables.$orangeColor;
+                }
             }
         }
     }
+    
 }

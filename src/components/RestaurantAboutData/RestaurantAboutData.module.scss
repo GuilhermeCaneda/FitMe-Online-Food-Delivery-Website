@@ -1,6 +1,8 @@
 @use '../../values/variables';
 
 .content{
+    width: 54.9em;
+    height: 14.5em;
     @include variables.defaultFlexColumn(center, flex-start);
     gap: 1em;
     h3{
@@ -14,10 +16,11 @@
         font-weight: 400;
     }
 
-    div{
+    .subcontent{
+        width: 100%;
         @include variables.defaultFlexRow(space-between, none);
         div{
-            @include variables.defaultFlexColumn(space-between, flex-start);
+            @include variables.defaultFlexColumn(space-between, none);
             gap: 1em;
             hr{
                 stroke-width: 0.1em;

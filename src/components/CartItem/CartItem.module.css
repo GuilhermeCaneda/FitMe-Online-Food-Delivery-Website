@@ -1,73 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono&family=Work+Sans&display=swap");
+/*Global*/
+/*Called in Logo.css*/
+/*Home*/
+/*Footer*/
+/*Login and Register*/
+/*Width*/
+/*Width*/
+* {
+  font-size: 10px;
+  font-family: Poppins;
+}
+
 .content {
+  width: 100%;
   display: flex;
+  justify-content: none;
+  align-items: none;
   flex-flow: column nowrap;
+  gap: 1.6em;
 }
-.content p {
+.content .restaurant {
   color: #202020;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1.6em;
   font-weight: 500;
-  line-height: normal;
 }
-.content p span {
+.content .restaurant span {
   color: #FC8019;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1.1em;
   font-weight: 500;
-  line-height: normal;
 }
-.content div {
+.content .subcontent {
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  flex-flow: row nowrap;
 }
 
 .food {
   display: flex;
   justify-content: flex-start;
+  align-items: none;
   flex-flow: column nowrap;
 }
 .food .name {
   color: #202020;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1.6em;
   font-weight: 500;
-  line-height: normal;
 }
 .food .price {
   color: #808080;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 1.6em;
   font-weight: 500;
-  line-height: normal;
 }
 
 .quantity {
   display: flex;
   justify-content: center;
-  align-self: flex-start;
-  gap: 20px;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  gap: 1em;
 }
 .quantity label {
-  color: #404040;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
+  color: #808080;
+  font-size: 2em;
   font-weight: 400;
-  line-height: normal;
+  width: 1em;
+  height: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row nowrap;
 }
 .quantity button {
   background-color: transparent;
   border: none;
   font-weight: 400;
-  font-size: 20px;
-  width: 10.2px;
-  height: 10.2px;
-  font-family: Poppins;
+  font-size: 2em;
+  width: 1.2em;
+  height: 1.2em;
+  transition: all 0.3s ease;
+  opacity: 1.5;
+  transform: scale(1.01, 1.01);
+  transform-origin: center;
+  cursor: pointer;
 }/*# sourceMappingURL=CartItem.module.css.map */

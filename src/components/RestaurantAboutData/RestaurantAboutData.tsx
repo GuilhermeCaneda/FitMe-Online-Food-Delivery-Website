@@ -4,10 +4,9 @@ import styles from "./RestaurantAboutData.module.css";
 const RestaurantAboutData: React.FC = () => {
     return(
         <div className={styles.content}>
-            
             <h3>LunchBox - Meals and Thalis</h3>
             <p>north indian, punjabi</p>
-            <div>
+            <div className={styles.subcontent}>
                 <div>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
@@ -17,17 +16,20 @@ const RestaurantAboutData: React.FC = () => {
                     </div>
                     <p>100+ ratings</p>
                 </div>
+
                 <hr/>
+
                 <div>
                     <p>30 Mins</p>
                     <p>Delivery Time</p>
                 </div>
+
                 <hr/>
+
                 <div>
                     <p>₹200</p>
                     <p>Cost for two</p>
                 </div>
-                
             </div>
         </div>
         

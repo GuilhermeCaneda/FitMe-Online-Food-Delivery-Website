@@ -14,10 +14,10 @@
 .content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   flex-flow: row nowrap;
   background: #202020;
-  max-width: 100vw;
+  max-width: 99vw;
   padding: 2.5em 20em;
 }
 .content img {
@@ -27,6 +27,8 @@
   background: lightgray 50%/cover no-repeat;
 }
 .content .offers {
+  justify-self: flex-end;
+  align-self: flex-end;
   display: flex;
   justify-content: center;
   align-items: flex-start;
