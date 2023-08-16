@@ -18,6 +18,72 @@
   flex-flow: column nowrap;
   width: 99vw;
 }
+.content .maincontent {
+  width: 152.5em;
+  padding: 20em 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+.content .maincontent div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 2em;
+}
+.content .maincontent .apple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 12.5em;
+  height: 7.5em;
+  padding: 0em 5em 2em 5em;
+  border-radius: 5em;
+  background: #FFD0D0;
+  gap: 1em;
+}
+.content .maincontent .apple svg {
+  width: 4.7em;
+  height: 5em;
+}
+.content .maincontent .banana {
+  display: flex;
+  width: 12.5em;
+  height: 7.5em;
+  padding: 2em 5em 2em 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 1em;
+  border-radius: 5em;
+  background: #FFEDD0;
+}
+.content .maincontent .banana svg {
+  width: 4.9em;
+  height: 4.6em;
+}
+.content .maincontent h1 {
+  color: #202020;
+  font-size: 6em;
+  font-weight: 500;
+}
+.content .maincontent span {
+  color: #FC8019;
+  font-size: 6em;
+  font-weight: 500;
+}
+.content .maincontent p {
+  padding-top: 2.5em;
+  width: 44.5em;
+  color: #404040;
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 1.5625em;
+}
 .content .subcontent {
   width: 130em;
 }
