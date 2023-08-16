@@ -1,48 +1,59 @@
 @use '../../values/variables';
 
 .content{
-    @include variables.defaultFlexRow(space-between, center);
     background: variables.$blackColor;
-    max-width: variables.$contentWidth;
-    padding: 2.5em 20em;
-    img{
-        width: 40em;
-        height: 25em;
-        border-radius: 1em;
-        background:lightgray 50% / cover no-repeat;
+    width: variables.$contentWidth;
+    @include variables.defaultFlexRow(center, center);
+    padding: 2.5em 0em;
+    .subcontent{
+        @include variables.defaultFlexRow(center, center);
+        width: variables.$contentAut;
+        gap:12em;
+        .about{
+            gap: 6em;
+            @include variables.defaultFlexRow(center, center);
+            img{
+                width: 40em;
+                height: 25em;
+                border-radius: 1em;
+                background:lightgray 50% / cover no-repeat;
+            }
+        }
+        
+        
+        .offers{
+            justify-self: flex-end;
+            align-self: flex-end;
+            @include variables.defaultFlexColumn(center, flex-start);
+            width: 33.2em;
+            height: 12.4em;
+            padding: 3em;
+            border-radius: 2em;
+            border: 0.2em dashed variables.$orangeColor;
+            gap: 2em;
+    
+            h4{
+                color: variables.$orangeColor;
+                font-size: 2.4em;
+                font-weight: 500;
+                color: variables.$orangeColor;
+            }
+    
+            div{
+                @include variables.defaultFlexRow(center, center);
+                gap: 1em;
+                svg{
+                    width: 2em;
+                    height: 2em;
+                    fill: variables.$orangeColor;
+                }
+                p{
+                    color: #FFF;
+                    font-size: 1.6em;
+                    font-weight: 500;
+                }
+            }
+        }
     }
     
-    .offers{
-        justify-self: flex-end;
-        align-self: flex-end;
-        @include variables.defaultFlexColumn(center, flex-start);
-        width: 33.2em;
-        height: 12.4em;
-        padding: 3em;
-        border-radius: 2em;
-        border: 0.2em dashed variables.$orangeColor;
-        gap: 2em;
-
-        h4{
-            color: variables.$orangeColor;
-            font-size: 2.4em;
-            font-weight: 500;
-            color: variables.$orangeColor;
-        }
-
-        div{
-            @include variables.defaultFlexRow(center, center);
-            gap: 1em;
-            svg{
-                width: 2em;
-                height: 2em;
-                fill: variables.$orangeColor;
-            }
-            p{
-                color: #FFF;
-                font-size: 1.6em;
-                font-weight: 500;
-            }
-        }
-    }
 }

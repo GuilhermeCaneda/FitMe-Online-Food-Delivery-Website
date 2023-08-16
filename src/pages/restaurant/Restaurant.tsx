@@ -19,6 +19,11 @@ const Restaurant: React.FC = () => {
         <section>
             <Header/>
             <RestaurantAbout/>
+            <div className={styles.search}>
+                <input type="text" placeholder="Search for dish" />
+                <button>Favourite</button>
+            </div>
+            
             <div className={styles.content}>
                 <div className={styles.subcontent}>
                     <nav>

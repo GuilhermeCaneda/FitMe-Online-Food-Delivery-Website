@@ -12,21 +12,36 @@
 }
 
 .content {
+  background: #202020;
+  width: 99vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
-  background: #202020;
-  max-width: 99vw;
-  padding: 2.5em 20em;
+  padding: 2.5em 0em;
 }
-.content img {
+.content .subcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 152.5em;
+  gap: 12em;
+}
+.content .subcontent .about {
+  gap: 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.content .subcontent .about img {
   width: 40em;
   height: 25em;
   border-radius: 1em;
   background: lightgray 50%/cover no-repeat;
 }
-.content .offers {
+.content .subcontent .offers {
   justify-self: flex-end;
   align-self: flex-end;
   display: flex;
@@ -40,25 +55,25 @@
   border: 0.2em dashed #FC8019;
   gap: 2em;
 }
-.content .offers h4 {
+.content .subcontent .offers h4 {
   color: #FC8019;
   font-size: 2.4em;
   font-weight: 500;
   color: #FC8019;
 }
-.content .offers div {
+.content .subcontent .offers div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
   gap: 1em;
 }
-.content .offers div svg {
+.content .subcontent .offers div svg {
   width: 2em;
   height: 2em;
   fill: #FC8019;
 }
-.content .offers div p {
+.content .subcontent .offers div p {
   color: #FFF;
   font-size: 1.6em;
   font-weight: 500;
