@@ -4,13 +4,11 @@ import images from "../../images/food1.jpg";
 import {useNavigate} from "react-router-dom";
 
 interface RestaurantCardProps{
-    name: String,
-    rating: Number,
     deliveryTime: String,
-    isExpensive: Boolean,
     location: String,
-    image: String,
-    topDishes: any[]
+    name: String,
+    objectId: String,
+    rating: Number,
 }
 
 const RestaurantCard: React.FC<RestaurantCardProps> = props => {

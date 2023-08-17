@@ -1,44 +1,79 @@
 import styles from "./Home.module.css";
 import Header from '../../components/Header/Header';
 import RestaurantCard from "../../components/RestaurantCard/RestaurantCard";
-import InstanceAxios from "../../axios/config";
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
+
 
 const Home: React.FC = () => {
-    const [restaurants, setRestaurants] = useState([]);
-    
+
+    type Restaurant = {
+        deliveryTime: String;
+        location: String;
+        name: String;
+        objectId: String;
+        rating: Number;
+    }
+
+    const [restaurants, setRestaurants] = useState<Restaurant[]>([{deliveryTime: "a",location: "a",name: "a", objectId: "a",rating: 1}]);
+
     /*
-    const instanceAxios = async () => {
-        try{
-            const response = await InstanceAxios({
-                method: 'post',
-                url: ('classes/FitMe'),
-                {
-                    query: `
-                        query{
-                            name
-                            location
-                            rating
-                            deliveryTime
-                        }
-                    `
-                }
-            });
-            setRestaurants(response.data.data);
-        } catch(error){
-            console.error(`Error: ${error}`);
-        }
-    };
-    
     useEffect(()=>{
-        instanceAxios();
-    }, []);*/
+        const bringData = async () => {
+            try{
+                console.log("Realizando a busca");
+                const response = await axios.get('https://parseapi.back4app.com/graphql', {
+                    headers: {
+                        'X-Parse-Application-Id': 'DSiIkHz2MVbCZutKS7abtgrRVsiLNNGcs0L7VsNL',
+                        'X-Parse-Master-Key': '0cpnqkSUKVkIDlQrNxameA6OmjxmrA72tsUMqVG9',
+                        'X-Parse-Client-Key': 'zXOqJ2k44R6xQqqlpPuizAr3rs58RhHXfU7Aj20V',
+                        'Content-Type': 'application/json'
+                    },
+                    params: {
+                        query: `
+                            query GetAllRestaurants {
+                                fitMes{
+                                    edges{
+                                        node{
+                                            objectId
+                                            name
+                                            rating
+                                            deliveryTime
+                                            location
+                                        }
+                                    }
+                                }
+                            }
+                        `
+                    }
+                })
+                console.log("----------dados obtidos----------");
+                console.log(response.data.data.fitMes.edges);
+                
+
+                const restaurantData = response.data.data.fitMes.edges.map((edge: Restaurant) => edge);
+                
+                setRestaurants(restaurantData);
+                console.log("----------dados naoobtidos #_#----------");
+                console.log(restaurants);
+                console.log("----------teste----------");
+                console.log(restaurants[0].name);
+
+            } catch(error){
+                console.log("erro: " + error);
+                console.error(error);
+            }
+        }
+        bringData();
+    }, []);
+    */
 
 
+    
+    
     return(
         <section className={styles.content}>
             <Header/>
-            
             <div className={styles.maincontent}>
                 <div>
                     <h1>Premium</h1>
@@ -85,22 +120,9 @@ const Home: React.FC = () => {
             <div className={styles.subcontent}>
                 <h4>Restaurants</h4>
                 <div className={styles.restaurantsgallery}>
-                    <RestaurantCard key={1} name={"Ramachandra Parlour"} rating={4} deliveryTime={"30 Mins"} 
-                    isExpensive={true} location={"south indian"} image={"abcd"} topDishes={[1, "A string"]}/>
-                    <RestaurantCard key={2} name={"Ramachandra Parlour"} rating={4} deliveryTime={"30 Mins"} 
-                    isExpensive={true} location={"south indian"} image={"abcd"} topDishes={[1, "A string"]}/>
-                    <RestaurantCard key={3} name={"Ramachandra Parlour"} rating={4} deliveryTime={"30 Mins"} 
-                    isExpensive={true} location={"south indian"} image={"abcd"} topDishes={[1, "A string"]}/>
-                    <RestaurantCard key={4} name={"Ramachandra Parlour"} rating={4} deliveryTime={"30 Mins"} 
-                    isExpensive={true} location={"south indian"} image={"abcd"} topDishes={[1, "A string"]}/>
-                    <RestaurantCard key={5} name={"Ramachandra Parlour"} rating={4} deliveryTime={"30 Mins"} 
-                    isExpensive={true} location={"south indian"} image={"abcd"} topDishes={[1, "A string"]}/>
-                    <RestaurantCard key={6} name={"Ramachandra Parlour"} rating={4} deliveryTime={"30 Mins"} 
-                    isExpensive={true} location={"south indian"} image={"abcd"} topDishes={[1, "A string"]}/>
-                    <RestaurantCard key={7} name={"Ramachandra Parlour"} rating={4} deliveryTime={"30 Mins"} 
-                    isExpensive={true} location={"south indian"} image={"abcd"} topDishes={[1, "A string"]}/>
-                    <RestaurantCard key={8} name={"Ramachandra Parlour"} rating={4} deliveryTime={"30 Mins"} 
-                    isExpensive={true} location={"south indian"} image={"abcd"} topDishes={[1, "A string"]}/>
+                    {/*(restaurants!==undefined) &&
+                        restaurants.map(restaurant => {return})*/
+                    }
                 </div>
             </div>
         </section>
