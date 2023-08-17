@@ -11,7 +11,48 @@
   font-family: Poppins;
 }
 
+@keyframes defaultSlideX {
+  0% {
+    transform: translateX(0%);
+  }
+  36% {
+    transform: translateX(72%);
+  }
+  72% {
+    transform: translateX(144%);
+  }
+  144% {
+    transform: translateX(0%);
+  }
+}
+@keyframes defaultSlideY {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes animInitialize {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .content {
+  opacity: 0;
+  transform: translateX(-2em);
+  animation-name: animInitialize;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-play-state: running;
   background: #202020;
   width: 99vw;
   display: flex;

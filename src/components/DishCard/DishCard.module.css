@@ -11,6 +11,37 @@
   font-family: Poppins;
 }
 
+@keyframes defaultSlideX {
+  0% {
+    transform: translateX(0%);
+  }
+  36% {
+    transform: translateX(72%);
+  }
+  72% {
+    transform: translateX(144%);
+  }
+  144% {
+    transform: translateX(0%);
+  }
+}
+@keyframes defaultSlideY {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes animInitialize {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .content {
   width: 75em;
   height: 18.4em;

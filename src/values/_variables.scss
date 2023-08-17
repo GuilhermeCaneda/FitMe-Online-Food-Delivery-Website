@@ -61,3 +61,52 @@ $contentForm: 60em; /*Width*/
     transform-origin: center; 
     background-color: $color;
 }
+
+
+@keyframes defaultSlideX{
+    0%{
+        transform: translateX(0%);
+    }
+    36%{
+        transform: translateX(72%);
+    }
+    72%{
+        transform: translateX(144%);
+    }
+    144%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes defaultSlideY{
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(50%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+@mixin defaultInitialize(){
+    opacity: 0;
+    transform: translateX(-2em);
+
+    animation-name: animInitialize;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+}
+@keyframes animInitialize{
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

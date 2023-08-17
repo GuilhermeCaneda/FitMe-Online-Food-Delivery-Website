@@ -3,6 +3,7 @@
 .content{
     @include variables.defaultFlexColumn(center, center);
     width: variables.$contentWidth;
+    @include variables.defaultInitialize();
 
     .maincontent{
         width: variables.$contentAut;
@@ -14,32 +15,36 @@
         }
         
         .apple{
-            @include variables.defaultFlexRow(center, center);
+            @include variables.defaultFlexColumn(flex-start, center);
             width: 12.5em;
             height: 7.5em;
-            padding: 0em 5em 2em 5em;
             border-radius: 5em;
             background: #FFD0D0;
-            gap: 1em;
+            
+            padding: 0em 0em;
             svg{
                 width: 4.7em; 
                 height: 5em;
+                
+                animation: defaultSlideY 1.6s linear infinite;
             }
         }
 
         .banana{
+            @include variables.defaultFlexRow(flex-start, center);
+            width: 12.5em;
+            height: 7.5em;
+            gap: 1em;
+            
+            padding: 0.2em 0.9em 0.2em 0.9em;
+            border-radius: 5em;
+            background: #FFEDD0;
             svg{
                 width: 4.9em; 
                 height: 4.6em;
+
+                animation: defaultSlideX 1.6s linear infinite;
             }
-            display: flex;
-            width: 12.5em;
-            height: 7.5em;
-            padding: 2em 5em 2em 0em;
-            @include variables.defaultFlexColumn(center, center);
-            gap: 1em;
-            border-radius: 5em;
-            background: #FFEDD0;
         }
 
         h1{

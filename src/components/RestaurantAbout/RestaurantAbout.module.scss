@@ -1,6 +1,7 @@
 @use '../../values/variables';
 
 .content{
+    @include variables.defaultInitialize();
     background: variables.$blackColor;
     width: variables.$contentWidth;
     @include variables.defaultFlexRow(center, center);
