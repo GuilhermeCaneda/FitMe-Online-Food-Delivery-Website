@@ -110,7 +110,7 @@ const Home: React.FC = () => {
                 <div className={styles.restaurantsgallery}>
                     {(restaurants!==undefined) &&
                         restaurants.map(restaurant => (
-                            <Link to={`/restaurant/${restaurant.objectId}`}><RestaurantCard objectId={restaurant.objectId} name={restaurant.name} location={restaurant.location} rating={restaurant.rating} deliveryTime={restaurant.deliveryTime}/></Link>
+                            <RestaurantCard objectId={restaurant.objectId} name={restaurant.name} location={restaurant.location} rating={restaurant.rating} deliveryTime={restaurant.deliveryTime}/>
                         ))
                     }
                 </div>

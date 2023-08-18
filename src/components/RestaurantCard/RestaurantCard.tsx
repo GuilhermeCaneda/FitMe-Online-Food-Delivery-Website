@@ -16,11 +16,11 @@ const RestaurantCard: React.FC<RestaurantCardProps> = props => {
     const navigate = useNavigate();
 
     const handleRestaurantPage = () => {
-        navigate('/restaurant');
+        navigate('/restaurant/' + props.objectId);
     }
 
     return(
-        <div className={styles.content} /*onClick={handleRestaurantPage}*/>
+        <div className={styles.content} onClick={handleRestaurantPage}>
             <img src={images}/>
             <h6>{props.name}</h6>
             <div className={styles.rating}>
