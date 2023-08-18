@@ -25,7 +25,7 @@
             line-height: 1.4em;
         }
     }
-    figure{
+    .image{
         width: 16em;
         height: 18.4em;
         display: flex;
@@ -50,5 +50,51 @@
         button:hover{
             @include variables.defaultHover();
         }
+    }
+}
+
+@media (max-width:770px){
+    .content{
+        width: auto;
+        height: 18.4em;
+        @include variables.defaultFlexRow(center, center);
+        flex-direction: column-reverse;
+        padding-top: 4em;
+        gap: 2em;
+        .describe{
+            @include variables.defaultFlexColumn(center, center);
+            gap: 0.5em;
+    
+            h5{
+                font-size: 2em;
+            }
+            h6{
+                font-size: 1.6em;
+            }
+            p{
+                font-size: 1.5em;
+                line-height: 1.4em;
+            }
+        }
+        .image{
+            width: 13em;
+            height: 15.4em;
+            img{
+                width: 16em;
+                height: 16em;
+                border-radius: 1em;
+                background:lightgray 50% / cover no-repeat;
+            }
+            butt{
+                width: 16em;
+            }
+        }
+    }
+}
+
+@media (max-width:520px){
+    .content{
+        max-width: 300px;
+        
     }
 }

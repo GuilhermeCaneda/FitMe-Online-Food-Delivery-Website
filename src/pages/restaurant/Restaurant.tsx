@@ -111,7 +111,6 @@ const Restaurant: React.FC = () => {
                 </div>
             </div>
 
-            
         </section>
     )
 }

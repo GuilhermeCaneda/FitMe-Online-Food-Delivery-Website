@@ -67,19 +67,19 @@
   font-size: 1.5em;
   line-height: 1.4em;
 }
-.content figure {
+.content .image {
   width: 16em;
   height: 18.4em;
   display: flex;
   flex-direction: column;
 }
-.content figure img {
+.content .image img {
   width: 16em;
   height: 16em;
   border-radius: 1em;
   background: lightgray 50%/cover no-repeat;
 }
-.content figure .add {
+.content .image .add {
   padding: 0.9375em 1.5625em;
   border-radius: 0.625em;
   border-color: transparent;
@@ -88,10 +88,59 @@
   color: #1AC84B;
   font-size: 1.6em;
 }
-.content figure button:hover {
+.content .image button:hover {
   transition: all 0.3s ease;
   opacity: 1.5;
   transform: scale(1.1, 1.1);
   transform-origin: center;
   cursor: pointer;
+}
+
+@media (max-width: 770px) {
+  .content {
+    width: auto;
+    height: 18.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    flex-direction: column-reverse;
+    padding-top: 4em;
+    gap: 2em;
+  }
+  .content .describe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 0.5em;
+  }
+  .content .describe h5 {
+    font-size: 2em;
+  }
+  .content .describe h6 {
+    font-size: 1.6em;
+  }
+  .content .describe p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+  }
+  .content .image {
+    width: 13em;
+    height: 15.4em;
+  }
+  .content .image img {
+    width: 16em;
+    height: 16em;
+    border-radius: 1em;
+    background: lightgray 50%/cover no-repeat;
+  }
+  .content .image butt {
+    width: 16em;
+  }
+}
+@media (max-width: 520px) {
+  .content {
+    max-width: 300px;
+  }
 }/*# sourceMappingURL=DishCard.module.css.map */

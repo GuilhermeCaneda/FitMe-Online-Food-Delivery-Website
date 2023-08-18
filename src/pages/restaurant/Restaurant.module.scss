@@ -87,5 +87,91 @@
             }
         }
     }
-    
+}
+
+
+
+@media (max-width:1600px){
+    .content{
+        .subcontent{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            hr{
+                display: none;
+            }
+            nav{
+                ul{
+                    flex-direction: row;
+                    gap: 5em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:770px){
+    .content{
+        
+
+        .subcontent{
+            nav{
+                ul{
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1em;
+                }
+            }
+
+            .dishgallery{
+                @include variables.defaultFlexColumn(flex-start, center);
+                gap: 3em;
+                max-height: 66em;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+        }
+    }
+}
+
+@media (max-width:660px){
+   .search{
+        flex-direction: column;
+        input{
+            width: 18.125em;
+            padding: 0.9375em 1.5625em;
+            font-size: 1.3em;
+        }
+   }
+}
+
+@media (max-width:630px){
+    .search{
+        input{
+            width: 18.125em;
+            padding: 0.9375em 1.5625em;
+            
+            font-size: 1.3em;
+        }
+    }
+}
+
+@media (max-width:770px){
+    .content{
+        .subcontent{
+            .dishgallery{
+                gap: 12em;
+            }
+        }
+    }
+}
+
+@media (max-width:520px){
+    .content{
+        
+        .subcontent{
+            max-width: 375px
+        }
+    }
 }

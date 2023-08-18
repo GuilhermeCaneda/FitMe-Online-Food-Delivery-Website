@@ -17,10 +17,10 @@ const DishCard: React.FC<DishCardProps> = (props) => {
             <p>{props.describe}</p>
         </div>
 
-        <figure>
+        <div className={styles.image}>
             <img src={images}/>
             <button className={styles.add}>Add +</button>
-        </figure>
+        </div>
     </div>
   )
 }
