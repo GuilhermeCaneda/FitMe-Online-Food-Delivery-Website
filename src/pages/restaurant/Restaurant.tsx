@@ -110,6 +110,8 @@ const Restaurant: React.FC = () => {
                     <Cart/>
                 </div>
             </div>
+
+            
         </section>
     )
 }

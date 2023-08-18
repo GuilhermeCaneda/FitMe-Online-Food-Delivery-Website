@@ -112,4 +112,34 @@
   color: #FFF;
   font-size: 1.6em;
   font-weight: 500;
+}
+
+@media (max-width: 1600px) {
+  .content .subcontent {
+    flex-direction: column;
+    gap: 5em;
+  }
+  .content .subcontent .offers {
+    align-self: center;
+  }
+}
+@media (max-width: 1075px) {
+  .content .subcontent .about {
+    flex-direction: column;
+  }
+}
+@media (max-width: 630px) {
+  .content .subcontent .about img {
+    width: 30em;
+    height: 20.5em;
+    border-radius: 1em;
+    background: lightgray 50%/cover no-repeat;
+  }
+  .content .subcontent .offers {
+    padding: 2em;
+    width: 25em;
+  }
+  .content .subcontent .offers * {
+    font-size: 7px;
+  }
 }/*# sourceMappingURL=RestaurantAbout.module.css.map */

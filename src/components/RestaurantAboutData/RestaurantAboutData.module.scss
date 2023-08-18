@@ -2,7 +2,7 @@
 
 .content{
     width: 54.9em;
-    height: 14.5em;
+    //height: 14.5em;
     @include variables.defaultFlexColumn(center, flex-start);
     gap: 1em;
     h3{
@@ -42,24 +42,32 @@
 }
 
 
-
-@media (max-width:1600px){
-    
-}
-
-@media (max-width:1250px){
-    
-}
-
-@media (max-width:1025px){
-    
-}
-
-@media (max-width:830px){
-    
-}
-
 @media (max-width:630px){
-    
+    .content{
+        width: auto;
+        gap: 0;
+        h3{
+            align-self: center;
+        }
+        p{
+            align-self: center;
+        }
+        .subcontent{
+            padding: 3em 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            hr{
+                display: none;
+            }
+            gap: 3em;
+            div{
+                gap: 1em;
+                div{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
 }
-
