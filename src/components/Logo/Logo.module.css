@@ -5,11 +5,6 @@
 /*Login and Register*/
 /*Width*/
 /*Width*/
-* {
-  font-size: 10px;
-  font-family: Poppins;
-}
-
 @keyframes defaultSlideX {
   0% {
     transform: translateX(0%);

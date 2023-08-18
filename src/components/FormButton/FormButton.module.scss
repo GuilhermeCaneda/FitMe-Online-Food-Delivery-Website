@@ -18,3 +18,21 @@
         @include variables.smallHover();
     }
 }
+
+@media (max-width: 630px){
+    .content{
+        button{
+            font-size: 1.9em;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .content{
+        button{
+            font-size: 1.5em;
+            border: 0.5rem variables.$orangeColor;
+        }
+    }
+}
+

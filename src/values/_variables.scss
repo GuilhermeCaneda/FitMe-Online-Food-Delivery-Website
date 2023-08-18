@@ -19,11 +19,6 @@ $contentFooterWidth: 145em;
 $contentAut: 152.5em; /*Width*/
 $contentForm: 60em; /*Width*/
 
-*{
-    font-size: 10px;
-    font-family: Poppins;
-}
-
 @mixin defaultFlexRow($justify, $align){
     display: flex;
     justify-content: $justify;

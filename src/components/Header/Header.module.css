@@ -5,11 +5,6 @@
 /*Login and Register*/
 /*Width*/
 /*Width*/
-* {
-  font-size: 10px;
-  font-family: Poppins;
-}
-
 @keyframes defaultSlideX {
   0% {
     transform: translateX(0%);
@@ -110,4 +105,72 @@
   opacity: 1.5;
   transform-origin: center;
   background-color: #FC8019;
+}
+
+@media (max-width: 1600px) {
+  .content .subcontent {
+    width: 120em;
+  }
+}
+@media (max-width: 1250px) {
+  .content .subcontent {
+    width: 100em;
+  }
+}
+@media (max-width: 1025px) {
+  .content .subcontent {
+    width: 80em;
+    flex-direction: column;
+    gap: 3em;
+  }
+  .content .subcontent .features {
+    gap: 1.5em;
+  }
+}
+@media (max-width: 830px) {
+  .content .subcontent {
+    width: 80em;
+  }
+  .content .subcontent .features {
+    flex-direction: column;
+  }
+}
+@media (max-width: 630px) {
+  .content .subcontent {
+    width: 45em;
+  }
+  .content .subcontent .features {
+    gap: 1em;
+  }
+  .content .subcontent .features input {
+    width: 18.125em;
+    padding: 0.9375em 1.5625em;
+    font-size: 1.3em;
+  }
+  .content .subcontent .features svg {
+    width: 3em;
+    height: 3.1em;
+    fill: none;
+  }
+  .content .subcontent .features svg rect {
+    width: 1.83571em;
+    height: 1.83571em;
+    stroke: #202020;
+    stroke-width: 2;
+  }
+  .content .subcontent .features button {
+    padding: 1.6em 2.5em;
+    background: #202020;
+    border-radius: 1em;
+    color: #FDFBFA;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  .content .subcontent .features button:hover {
+    border-color: transparent;
+    transition: all 0.3s ease;
+    opacity: 1.5;
+    transform-origin: center;
+    background-color: #FC8019;
+  }
 }/*# sourceMappingURL=Header.module.css.map */

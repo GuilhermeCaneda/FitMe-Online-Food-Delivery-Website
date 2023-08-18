@@ -81,6 +81,8 @@ const Restaurant: React.FC = () => {
         <section>
             <Header/>
             <RestaurantAbout name={restaurantInfo.name} rating={restaurantInfo.rating.toString()} deliveryTime={restaurantInfo.deliveryTime} location={restaurantInfo.location}/>
+            
+            
             <div className={styles.search}>
                 <input type="text" placeholder="Search for dish" />
                 <button>Favourite</button>

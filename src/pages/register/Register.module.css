@@ -5,11 +5,6 @@
 /*Login and Register*/
 /*Width*/
 /*Width*/
-* {
-  font-size: 10px;
-  font-family: Poppins;
-}
-
 @keyframes defaultSlideX {
   0% {
     transform: translateX(0%);
@@ -85,4 +80,32 @@
   color: #1A1A1A;
   font-size: 1.6em;
   font-weight: 700;
+}
+
+@media (max-width: 1600px) {
+  .content .titlepage {
+    width: 120em;
+  }
+}
+@media (max-width: 1250px) {
+  .content .titlepage {
+    width: 80em;
+  }
+}
+@media (max-width: 840px) {
+  .content .titlepage {
+    width: 60em;
+  }
+}
+@media (max-width: 630px) {
+  .content .titlepage {
+    width: 45em;
+    font-size: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .content .titlepage {
+    width: 35em;
+    font-size: 1em;
+  }
 }/*# sourceMappingURL=Register.module.css.map */

@@ -5,11 +5,6 @@
 /*Login and Register*/
 /*Width*/
 /*Width*/
-* {
-  font-size: 10px;
-  font-family: Poppins;
-}
-
 @keyframes defaultSlideX {
   0% {
     transform: translateX(0%);
@@ -75,4 +70,20 @@
   transform: scale(1.01, 1.01);
   transform-origin: center;
   cursor: pointer;
+}
+
+@media (max-width: 840px) {
+  .content .registerform {
+    width: 50em;
+  }
+}
+@media (max-width: 630px) {
+  .content .registerform {
+    width: 45em;
+  }
+}
+@media (max-width: 480px) {
+  .content .registerform {
+    width: 35em;
+  }
 }/*# sourceMappingURL=FormRegister.module.css.map */

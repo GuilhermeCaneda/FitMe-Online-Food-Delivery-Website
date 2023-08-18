@@ -27,8 +27,26 @@
     }
 }
 
-@media screen and (max-width: 1599px) {
-    *{
-        font-size: 4px;
+@media (max-width:840px){
+    .content{
+        .loginform{
+            width: 50em;
+        }
+    }
+}
+
+@media (max-width:630px){
+    .content{
+        .loginform{
+            width: 45em;
+        }
+    }
+}
+
+@media (max-width:480px){
+    .content{
+        .loginform{
+            width: 35em;
+        }
     }
 }

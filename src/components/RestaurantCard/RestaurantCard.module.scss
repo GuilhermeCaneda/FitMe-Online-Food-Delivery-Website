@@ -73,3 +73,25 @@
 .content:hover{
     @include variables.defaultHover();
 }
+
+@media (max-width:1250px){
+    .content{
+        max-width: 22.7em;
+        height: 42.4em;
+        justify-content: space-around;
+        *{
+            font-size: 9px;
+        }
+    }
+}
+
+@media (max-width:630px){
+    .content{
+        max-width: 22.7em;
+        height: 42.4em;
+        justify-content: space-around;
+        *{
+            font-size: 9px;
+        }
+    }
+}

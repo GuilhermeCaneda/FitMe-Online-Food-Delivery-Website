@@ -60,3 +60,95 @@
         }
     }
 }
+
+
+@media (max-width:1600px){
+    .content{
+        .subcontent{
+            width: 120em;
+        }
+    }
+    
+}
+@media (max-width:1250px){
+    .content{
+        .subcontent{
+            width: 100em;
+        }
+    }
+}
+
+@media (max-width:1025px){
+    .content{
+        .subcontent{
+            width: 80em;
+            flex-direction: column;
+            gap: 3em;
+            .features{
+                gap: 1.5em;
+            }
+        }
+    }
+}
+
+
+@media (max-width:830px){
+    .content{
+        .subcontent{
+            width: 80em;
+            .features{
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width:630px){
+    .content{
+        .subcontent{
+            width: 45em;
+
+
+
+
+            .features{
+                gap: 1em;
+        
+                input{
+                    width: 18.125em;
+                    padding: 0.9375em 1.5625em;
+                    
+                    font-size: 1.3em;
+                }
+                
+                
+                svg{
+                    width: 3.0em;
+                    height: 3.1em;
+                    fill: none;
+                    rect{
+                        width: 1.83571em;
+                        height: 1.83571em;
+                        stroke: #202020;
+                        stroke-width: 2;
+                    }
+                }
+    
+                button{
+                    padding: 1.6em 2.5em;
+                    background: variables.$blackColor;
+                    border-radius: 1.0em;
+                    color: #FDFBFA;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                }
+                button:hover{
+                    @include variables.colorHover(variables.$orangeColor);
+                }
+            }
+        }
+
+
+        
+    }
+}

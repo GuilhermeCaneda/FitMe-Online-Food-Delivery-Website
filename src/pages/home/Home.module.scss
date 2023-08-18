@@ -86,3 +86,123 @@
         }
     }
 }
+
+@media (max-width:1600px){
+    .content{
+        .maincontent{
+            width: 120em;
+        }
+        
+        .subcontent{
+            width: 100em;
+        }
+    }
+}
+
+@media (max-width:1250px){
+    .content{
+        .maincontent{
+            width: 100em;
+            div{
+                gap: 1em;
+            }
+            span, h1{
+                font-size: 4em;
+            }
+            p{
+                font-size: 1.2em;
+            }
+
+            .apple{
+                svg{
+                    width: 3.7em;
+                    height: 4em;
+                }
+                width: 10.5em;
+                height: 5.5em;
+            }
+
+            .banana{
+                padding: 0.2em 0.3em 0.2em 0.3em;
+                svg{
+                    width: 3.9em;
+                    height: 3.64em;
+                }
+                width: 10.5em;
+                height: 5.5em;
+            }
+        }
+        
+        .subcontent{
+            width: 100em;
+        }
+    }
+}
+
+@media (max-width:1025px){
+    .content{
+        .maincontent{
+            width: 80em;
+        }
+        .subcontent{
+            width: 80em;
+        }
+    }
+}
+
+@media (max-width:830px){
+    .content{
+        .maincontent{
+            width: 60em;
+        }
+        .subcontent{
+            width: 60em;
+        }
+    }
+}
+
+@media (max-width:630px){
+    .content{
+        padding-bottom: 0;
+        .maincontent{
+            padding: 5em 0;
+            width: 30em;
+            div{
+                gap: 0.5em;
+                flex-wrap: wrap;
+            }
+            span, h1{
+
+                font-size: 4em;
+            }
+            p{
+                max-width: 300px;
+                font-size: 1.2em;
+                white-space: pre-line;
+            }
+
+            .apple{
+                svg{
+                    width: 1.8em;
+                    height: 2em;
+                }
+                width: 5.5em;
+                height: 2.75em;
+            }
+
+            .banana{
+                padding: 0.1em 0.1.5em 0.1em 1.5em;
+                svg{
+                    width: 2em;
+                    height: 1.8em;
+                }
+                width: 5.5em;
+                height: 2.75em;
+            }
+        }
+        .subcontent{
+            width: 30em;
+        }
+    }
+}
+

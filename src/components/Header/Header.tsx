@@ -18,7 +18,7 @@ const Header: React.FC = () => {
                         <rect x="5.28577" y="10.0714"  rx="3.6"/>
                     </svg>
                     
-                    <Link to={"/register"}><button>Sign In</button></Link>
+                    <Link to={"/login"}><button>Sign In</button></Link>
                 </div>
             </div>
             

@@ -5,11 +5,6 @@
 /*Login and Register*/
 /*Width*/
 /*Width*/
-* {
-  font-size: 10px;
-  font-family: Poppins;
-}
-
 @keyframes defaultSlideX {
   0% {
     transform: translateX(0%);
@@ -72,4 +67,21 @@
   transform: scale(1.01, 1.01);
   transform-origin: center;
   cursor: pointer;
+}
+
+@media (max-width: 630px) {
+  .content label {
+    font-size: 1.9em;
+  }
+  .content input {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 480px) {
+  .content label {
+    font-size: 1.5em;
+  }
+  .content input {
+    font-size: 1em;
+  }
 }/*# sourceMappingURL=FormField.module.css.map */

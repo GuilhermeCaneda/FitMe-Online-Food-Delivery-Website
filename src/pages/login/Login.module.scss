@@ -21,3 +21,45 @@
     }
 }
 
+@media (max-width:1600px){
+    .content{
+        .titlepage{
+            width: 120em;
+        }
+    }
+    
+}
+
+@media (max-width:1250px){
+    .content{
+        .titlepage{
+            width: 80em;
+        }
+    }
+}
+
+@media (max-width:840px){
+    .content{
+        .titlepage{
+            width: 60em;
+            font-size: 1em;
+        }
+    }
+}
+
+@media (max-width:630px){
+    .content{
+        .titlepage{
+            width: 45em;
+        }
+    }
+}
+
+@media (max-width:480px){
+    .content{
+        .titlepage{
+            width: 35em;
+            font-size: 1em;
+        }
+    }
+}
