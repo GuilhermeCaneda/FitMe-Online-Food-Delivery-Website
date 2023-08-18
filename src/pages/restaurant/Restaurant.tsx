@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header';
 import RestaurantAbout from "../../components/RestaurantAbout/RestaurantAbout";
 import Cart from "../../components/Cart/Cart";
 import DishCard from "../../components/DishCard/DishCard";
+import { useParams } from "react-router-dom";
 
 type DishItems = {
     dish: String,
@@ -14,6 +15,9 @@ const Restaurant: React.FC = () => {
     let describe: String = "Brunch: One meal to rule them all! Grab this mega saver combo with your choice of 2 veg wraps, Aloo Paratha (2 pcs), chole and Curd lunchbox and 2 choco lava cakes. This is just bliss on a plate!";
     let dummyItens: DishItems[] = [{dish: "Brunch for 2 - Veg", price: 599, describe: describe}, 
     {dish: "Brunch for 2 - Veg", price: 599, describe: describe},{dish: "Brunch for 2 - Veg", price: 599, describe: describe}];
+
+    const {id} = useParams();
+
 
     return(
         <section>

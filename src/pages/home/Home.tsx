@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header';
 import RestaurantCard from "../../components/RestaurantCard/RestaurantCard";
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Home: React.FC = () => {
@@ -16,8 +17,7 @@ const Home: React.FC = () => {
     }
 
     const [restaurants, setRestaurants] = useState<Restaurant[]>([{deliveryTime: "a",location: "a",name: "a", objectId: "a",rating: 1}]);
-
-    /*
+    
     useEffect(()=>{
         const bringData = async () => {
             try{
@@ -47,17 +47,9 @@ const Home: React.FC = () => {
                         `
                     }
                 })
-                console.log("----------dados obtidos----------");
-                console.log(response.data.data.fitMes.edges);
-                
-
-                const restaurantData = response.data.data.fitMes.edges.map((edge: Restaurant) => edge);
-                
-                setRestaurants(restaurantData);
-                console.log("----------dados naoobtidos #_#----------");
-                console.log(restaurants);
-                console.log("----------teste----------");
-                console.log(restaurants[0].name);
+                setRestaurants(response.data.data.fitMes.edges.map((edge: any) => edge.node));
+                console.log("Dados obtidos (restaurants):", restaurants);
+                console.log("Nome do terceiro restaurante:", restaurants[3].name);
 
             } catch(error){
                 console.log("erro: " + error);
@@ -66,10 +58,6 @@ const Home: React.FC = () => {
         }
         bringData();
     }, []);
-    */
-
-
-    
     
     return(
         <section className={styles.content}>
@@ -120,8 +108,10 @@ const Home: React.FC = () => {
             <div className={styles.subcontent}>
                 <h4>Restaurants</h4>
                 <div className={styles.restaurantsgallery}>
-                    {/*(restaurants!==undefined) &&
-                        restaurants.map(restaurant => {return})*/
+                    {(restaurants!==undefined) &&
+                        restaurants.map(restaurant => (
+                            <Link to={`/restaurant/${restaurant.objectId}`}><RestaurantCard objectId={restaurant.objectId} name={restaurant.name} location={restaurant.location} rating={restaurant.rating} deliveryTime={restaurant.deliveryTime}/></Link>
+                        ))
                     }
                 </div>
             </div>

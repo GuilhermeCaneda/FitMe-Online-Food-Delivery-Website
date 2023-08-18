@@ -8,7 +8,7 @@ interface RestaurantCardProps{
     location: String,
     name: String,
     objectId: String,
-    rating: Number,
+    rating: Number
 }
 
 const RestaurantCard: React.FC<RestaurantCardProps> = props => {
