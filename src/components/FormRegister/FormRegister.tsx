@@ -42,8 +42,8 @@ const FormRegister = () => {
                     mutation SignUp{
                         signUp(input: {
                         fields: {
-                            username: ${username}
-                            password: ${password}
+                            username: "${username}"
+                            password: "${password}"
                         }
                         }){
                         viewer{
@@ -64,7 +64,7 @@ const FormRegister = () => {
                     }
                 });
         
-            console.log('Response: ', response.data);
+            console.log('Response: ', response.data.data);
         } catch(error){
             console.log("erro: " + error);
             console.error(error);
