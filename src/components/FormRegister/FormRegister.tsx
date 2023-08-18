@@ -35,33 +35,36 @@ const FormRegister = () => {
     const uploadData = async () => {
         try{
             console.log("Conectando a API");
-            const response = await axios.post('https://parseapi.back4app.com/graphql', {
-                headers: {
-                    'X-Parse-Application-Id': 'DSiIkHz2MVbCZutKS7abtgrRVsiLNNGcs0L7VsNL',
-                    'X-Parse-Master-Key': '0cpnqkSUKVkIDlQrNxameA6OmjxmrA72tsUMqVG9',
-                    'X-Parse-Client-Key': 'zXOqJ2k44R6xQqqlpPuizAr3rs58RhHXfU7Aj20V',
-                    'Content-Type': 'application/json'
-                },
-                params: {
-                    mutation: `
-                        mutation SignUp{
-                            signUp(input: {
-                                fields: {
-                                    username: ${username}
-                                    password: ${password}
-                                }
-                            })
-                            viewer{
-                                user{
-                                    id
-                                    createdAt
-                                }
-                                sessionToken
-                            }
+            const response = await axios.post('https://parseapi.back4app.com/graphql', 
+                
+            {
+                query: `
+                    mutation SignUp{
+                        signUp(input: {
+                        fields: {
+                            username: ${username}
+                            password: ${password}
                         }
-                    `
-                }
-            })
+                        }){
+                        viewer{
+                            user{
+                            id
+                            createdAt
+                            }
+                            sessionToken
+                        }
+                        }
+                    }
+                `
+            },  {headers: {
+                        'X-Parse-Application-Id': 'DSiIkHz2MVbCZutKS7abtgrRVsiLNNGcs0L7VsNL',
+                        'X-Parse-Master-Key': '0cpnqkSUKVkIDlQrNxameA6OmjxmrA72tsUMqVG9',
+                        'X-Parse-Client-Key': 'zXOqJ2k44R6xQqqlpPuizAr3rs58RhHXfU7Aj20V',
+                        'Content-Type': 'application/json'
+                    }
+                });
+        
+            console.log('Response: ', response.data);
         } catch(error){
             console.log("erro: " + error);
             console.error(error);
