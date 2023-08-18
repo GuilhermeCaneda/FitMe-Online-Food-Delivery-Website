@@ -7,6 +7,7 @@ Projeto do terceiro desafio oferecido pela COMPASS UOL, com o objetivo de aplica
 
 ### Tecnologias
 ```
+VSCODE
 Create React App
 HTML
 React (Route, ContextAPI, Hooks...)
@@ -16,6 +17,14 @@ Axios
 SASS
 Typescript
 ```
+
+### Extensões (VSCODE)
+```
+GRAPHQL
+SCSS
+SASS
+```
+
 ## Como Executar
 
 1 - Clone este repositório:
