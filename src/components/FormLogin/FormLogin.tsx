@@ -59,7 +59,7 @@ const FormLogin = () => {
                         'Content-Type': 'application/json'
                     }
             });
-        
+            setStatus(0);
             console.log('Response: ', response);
             setStatus(response.status);
             if(response.status==200){
@@ -84,9 +84,10 @@ const FormLogin = () => {
         if(status==200 && authContext){
             authContext.logIn(user, token);
             console.log(authContext);
+
             navigate('/');
         }
-    }, [status]);
+    }, [status, authContext]);
 
 
     const handleRegister = () => {

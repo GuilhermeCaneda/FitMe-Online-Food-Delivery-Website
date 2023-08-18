@@ -72,7 +72,8 @@ const FormRegister = () => {
                         'Content-Type': 'application/json'
                     }
                 });
-        
+                
+                setStatus(0);
                 console.log('Response: ', response);
                 setStatus(response.status);
                 if(response.status==200){
@@ -84,11 +85,41 @@ const FormRegister = () => {
             console.error(error);
         }
     }
+    let dummyMessage: String[] = [''];
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log("username: " + username);
         console.log("password: " + password);
+        /*dummyMessage = [''];
+        if(password.length<8){
+            dummyMessage.join('Senha menor do que 8 caractéres');
+        }
+
+        if(password!==confirmPassword){
+            dummyMessage.join('Senha diferentes');
+        }
+
+        if(username.trim()===''){
+            dummyMessage.join('Digite um username');
+        } 
+
+        if(password.trim()===''){
+            dummyMessage.join('Digite a senha');
+        }
+
+        if(email.trim()===''){
+            dummyMessage.join('Digite um email');
+        }
+
+        if(confirmPassword.trim()!==''){
+            dummyMessage.join('Confirme a semana');
+        }
+        
+        if(dummyMessage[0]=='' && dummyMessage.length==1){
+            uploadData();
+        }*/
+
         uploadData();
     }
 
@@ -98,7 +129,8 @@ const FormRegister = () => {
             console.log(authContext);
             navigate('/');
         }
-    }, [status]);
+    }, [status, authContext]);
+    
     
     const handleLogin = () => {
         navigate('/login');
@@ -112,6 +144,8 @@ const FormRegister = () => {
                 <FormField label="E-mail" type="email" onChange={handleEmail}/>
                 <FormField label="Password" type="password" onChange={handlePassword}/>
                 <FormField label="Confirm Password" type="password" onChange={handleConfirmPassword}/>
+                
+
                 <FormButton text="Register"/>
                 <p>Yes I have an account? <button onClick={handleLogin}>Login</button></p>
             </form>

@@ -13,10 +13,10 @@ const Header: React.FC = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        if(authContext?.isLogged==true){
+        if(authContext?.isLogged===true){
             console.log("Disconnected");
             authContext.logOut();
-        }else if(authContext?.isLogged==false){
+        }else if(authContext?.isLogged===false){
             console.log("Connected");
         }
         navigate('/login');
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                         <rect x="5.28577" y="10.0714"  rx="3.6"/>
                     </svg>
                     
-                    <button onClick={handleLogin}>{authContext?.isLogged ? "Disconnect" : "Sign In"} {authContext?.userName}</button>
+                    <button onClick={handleLogin}>{authContext?.isLogged===true ? "Disconnect" : "Sign In"} {authContext?.userName}</button>
                 </div>
             </div>
             
