@@ -8,9 +8,9 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 
 type DishInfo = {
-    dish: String,
+    name: String,
     price: Number,
-    describe: String
+    description: String
 }
 
 type RestaurantInfo = {
@@ -25,7 +25,7 @@ const Restaurant: React.FC = () => {
     const {id} = useParams();
 
     const [restaurantInfo, setRestaurantInfo] = useState<RestaurantInfo>({deliveryTime: "...", location: "...", name: "...", rating: 0, 
-    topDishes: [{dish: "...", price: 0, describe: "..."}]});
+    topDishes: [{name: "...", price: 0, description: "..."}]});
     
 
     
@@ -43,7 +43,7 @@ const Restaurant: React.FC = () => {
                     params: {
                         query: `
                             query GetRestaurantById {
-                                fitMe(id: ${id}){
+                                fitMe(id: "${id}"){
                                     name
                                     location
                                     rating
@@ -62,10 +62,10 @@ const Restaurant: React.FC = () => {
                         `
                     }
                 })
-                console.log(response);
-                /*setRestaurantInfo(response.data.data.fitMe);
-                
-                console.log("Dados obtidos (restaurants):", restaurantInfo);
+                console.log(response.data.data.fitMe);
+                setRestaurantInfo(response.data.data.fitMe);
+                /*
+                console.log("Dados obtidos (restaurants):", restaaurantInfo);
                 console.log("Nome do restaurante:", restaurantInfo.name);*/
 
             } catch(error){
@@ -101,11 +101,9 @@ const Restaurant: React.FC = () => {
                     <div className={styles.dishgallery}>
                         {
                             restaurantInfo.topDishes.map(item=>(
-                                <DishCard dish={item.dish} price={item.price.toString()} describe={item.describe}/>
+                                <DishCard dish={item.name} price={item.price.toString()} describe={item.description}/>
                             ))
-                            
                         }
-                        <p>{id}</p>
                     </div>
                     <Cart/>
                 </div>
