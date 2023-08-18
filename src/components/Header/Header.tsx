@@ -1,10 +1,27 @@
 import styles from "./Header.module.css"
 import Logo from "../Logo/Logo";
 
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
 
 const Header: React.FC = () => {
+
+    const authContext = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+        if(authContext?.isLogged==true){
+            console.log("Disconnected");
+            authContext.logOut();
+        }else if(authContext?.isLogged==false){
+            console.log("Connected");
+        }
+        navigate('/login');
+    }
+    
 
     return (
         <header className={styles.content}>
@@ -18,7 +35,7 @@ const Header: React.FC = () => {
                         <rect x="5.28577" y="10.0714"  rx="3.6"/>
                     </svg>
                     
-                    <Link to={"/login"}><button>Sign In</button></Link>
+                    <button onClick={handleLogin}>{authContext?.isLogged ? "Disconnect" : "Sign In"} {authContext?.userName}</button>
                 </div>
             </div>
             

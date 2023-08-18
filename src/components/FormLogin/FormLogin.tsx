@@ -61,12 +61,10 @@ const FormLogin = () => {
             });
         
             console.log('Response: ', response);
-            console.log('Token', response.data.data.logIn.viewer.sessionToken);
-            console.log('userName', response.data.data.logIn.viewer.user.userName);
             setStatus(response.status);
             if(response.status==200){
                 setToken(response.data.data.logIn.viewer.sessionToken);
-                setUser(response.data.data.logIn.viewer.user.userName);
+                setUser(response.data.data.logIn.viewer.user.username);
             }
 
         } catch(error){
@@ -86,7 +84,7 @@ const FormLogin = () => {
         if(status==200 && authContext){
             authContext.logIn(user, token);
             console.log(authContext);
-            //navigate('/');
+            navigate('/');
         }
     }, [status]);
 
@@ -102,9 +100,6 @@ const FormLogin = () => {
                 <FormField label="Password" type="password" onChange={handlePassword}/>
                 <p>Don't have any account? <button onClick={handleRegister}>Register</button></p>
                 <FormButton text="Login"/>
-
-                <p>{authContext?.userName}</p>
-                <p>{authContext?.token}</p>
             </form>
         </div>
         

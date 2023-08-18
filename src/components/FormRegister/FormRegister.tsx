@@ -2,16 +2,25 @@ import FormField from "../../components/FormField/FormField";
 import FormButton from "../../components/FormButton/FormButton";
 import styles from "./FormRegister.module.css";
 import {useNavigate} from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 
+import { AuthContext } from '../../context/AuthContext';
 
 const FormRegister = () => {
+    const authContext = useContext(AuthContext);
+
     const [fullName, setFullName] = useState('');
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+
+
+    const [status, setStatus] = useState<Number>();
+    const [token, setToken] = useState<string>('');
+    const [user, setUser] = useState<string>('');
+
 
     const navigate = useNavigate();
 
@@ -64,7 +73,12 @@ const FormRegister = () => {
                     }
                 });
         
-            console.log('Response: ', response.data.data);
+                console.log('Response: ', response);
+                setStatus(response.status);
+                if(response.status==200){
+                    setToken(response.data.data.logIn.viewer.sessionToken);
+                    setUser(response.data.data.logIn.viewer.user.username);
+                }
         } catch(error){
             console.log("erro: " + error);
             console.error(error);
@@ -76,8 +90,15 @@ const FormRegister = () => {
         console.log("username: " + username);
         console.log("password: " + password);
         uploadData();
-        //navigate('/');
     }
+
+    useEffect(() => {
+        if(status==201 && authContext){
+            authContext.logIn(user, token);
+            console.log(authContext);
+            navigate('/');
+        }
+    }, [status]);
     
     const handleLogin = () => {
         navigate('/login');
