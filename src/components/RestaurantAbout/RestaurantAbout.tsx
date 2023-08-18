@@ -2,13 +2,20 @@ import images from "../../images/food1.jpg";
 import RestaurantAboutData from "../RestaurantAboutData/RestaurantAboutData";
 import styles from "./RestaurantAbout.module.css";
 
-const RestaurantAbout: React.FC = () => {
+interface RestaurantAboutProps{
+    name: String,
+    location: String,
+    rating: String,
+    deliveryTime: String
+}
+
+const RestaurantAbout: React.FC<RestaurantAboutProps> = (props) => {
     return(
         <div className={styles.content}>
             <div className={styles.subcontent}>
                 <div className={styles.about}>
                     <img src={images}/>
-                    <RestaurantAboutData/>
+                    <RestaurantAboutData name={props.name} location={props.location} rating={props.rating} deliveryTime={props.deliveryTime}/>
                 </div>
                 <div className={styles.offers}>
                     <h4>Offers</h4>

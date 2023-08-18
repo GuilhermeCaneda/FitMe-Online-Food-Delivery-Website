@@ -24,7 +24,7 @@ const FormRegister = () => {
                 <FormField label="Password" type="password"/>
                 <FormField label="Confirm Password" type="password"/>
                 <FormButton text="Register"/>
-                <p>Yes I have an account? <button onClick={handleLogin}>Register</button></p>
+                <p>Yes I have an account? <button onClick={handleLogin}>Login</button></p>
             </form>
         </div>
         

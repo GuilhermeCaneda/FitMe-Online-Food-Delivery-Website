@@ -4,25 +4,83 @@ import RestaurantAbout from "../../components/RestaurantAbout/RestaurantAbout";
 import Cart from "../../components/Cart/Cart";
 import DishCard from "../../components/DishCard/DishCard";
 import { useParams } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
 
-type DishItems = {
+type DishInfo = {
     dish: String,
     price: Number,
     describe: String
 }
 
-const Restaurant: React.FC = () => {
-    let describe: String = "Brunch: One meal to rule them all! Grab this mega saver combo with your choice of 2 veg wraps, Aloo Paratha (2 pcs), chole and Curd lunchbox and 2 choco lava cakes. This is just bliss on a plate!";
-    let dummyItens: DishItems[] = [{dish: "Brunch for 2 - Veg", price: 599, describe: describe}, 
-    {dish: "Brunch for 2 - Veg", price: 599, describe: describe},{dish: "Brunch for 2 - Veg", price: 599, describe: describe}];
+type RestaurantInfo = {
+    name: String;
+    deliveryTime: String;
+    location: String;
+    rating: Number;
+    topDishes: DishInfo[];
+}
 
+const Restaurant: React.FC = () => {
     const {id} = useParams();
+
+    const [restaurantInfo, setRestaurantInfo] = useState<RestaurantInfo>({deliveryTime: "...", location: "...", name: "...", rating: 0, 
+    topDishes: [{dish: "...", price: 0, describe: "..."}]});
+    
+
+    
+    useEffect(()=>{
+        const bringData = async () => {
+            try{
+                console.log("Realizando a busca");
+                const response = await axios.get('https://parseapi.back4app.com/graphql', {
+                    headers: {
+                        'X-Parse-Application-Id': 'DSiIkHz2MVbCZutKS7abtgrRVsiLNNGcs0L7VsNL',
+                        'X-Parse-Master-Key': '0cpnqkSUKVkIDlQrNxameA6OmjxmrA72tsUMqVG9',
+                        'X-Parse-Client-Key': 'zXOqJ2k44R6xQqqlpPuizAr3rs58RhHXfU7Aj20V',
+                        'Content-Type': 'application/json'
+                    },
+                    params: {
+                        query: `
+                            query GetRestaurantById {
+                                fitMe(id: ${id}){
+                                    name
+                                    location
+                                    rating
+                                    deliveryTime
+                                    topDishes{
+                                        ...AllDishes
+                                    }
+                                }
+                            }
+
+                            fragment AllDishes on Dish{
+                                name
+                                description
+                                price
+                            }
+                        `
+                    }
+                })
+                console.log(response);
+                /*setRestaurantInfo(response.data.data.fitMe);
+                
+                console.log("Dados obtidos (restaurants):", restaurantInfo);
+                console.log("Nome do restaurante:", restaurantInfo.name);*/
+
+            } catch(error){
+                console.log("erro: " + error);
+                console.error(error);
+            }
+        }
+        bringData();
+    }, []);
 
 
     return(
         <section>
             <Header/>
-            <RestaurantAbout/>
+            <RestaurantAbout name={restaurantInfo.name} rating={restaurantInfo.rating.toString()} deliveryTime={restaurantInfo.deliveryTime} location={restaurantInfo.location}/>
             <div className={styles.search}>
                 <input type="text" placeholder="Search for dish" />
                 <button>Favourite</button>
@@ -42,17 +100,16 @@ const Restaurant: React.FC = () => {
                     <hr/>
                     <div className={styles.dishgallery}>
                         {
-                            dummyItens.map(item => {
-                                return <DishCard dish={item.dish} price={item.price.toString()} describe={item.describe}/>
-                            })
+                            restaurantInfo.topDishes.map(item=>(
+                                <DishCard dish={item.dish} price={item.price.toString()} describe={item.describe}/>
+                            ))
+                            
                         }
+                        <p>{id}</p>
                     </div>
                     <Cart/>
                 </div>
-                
-                
             </div>
-            
         </section>
     )
 }

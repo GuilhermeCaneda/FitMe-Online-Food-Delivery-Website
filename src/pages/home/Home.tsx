@@ -47,7 +47,7 @@ const Home: React.FC = () => {
                         `
                     }
                 })
-                setRestaurants(response.data.data.fitMes.edges.map((edge: any) => edge.node));
+                setRestaurants(response.data.data.fitMes.edges.map((edge: any) => edge.node));/*dsada*/
                 console.log("Dados obtidos (restaurants):", restaurants);
                 console.log("Nome do terceiro restaurante:", restaurants[3].name);
 

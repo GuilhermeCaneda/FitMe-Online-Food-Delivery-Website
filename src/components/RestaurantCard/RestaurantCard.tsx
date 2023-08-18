@@ -20,7 +20,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = props => {
     }
 
     return(
-        <div className={styles.content} onClick={handleRestaurantPage}>
+        <div className={styles.content} /*onClick={handleRestaurantPage}*/>
             <img src={images}/>
             <h6>{props.name}</h6>
             <div className={styles.rating}>
