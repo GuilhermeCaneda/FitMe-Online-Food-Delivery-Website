@@ -9,7 +9,7 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Home from './pages/home/Home';
 import Restaurant from './pages/restaurant/Restaurant';
-import Footer from './components/Footer/Footer';
+import { AuthProvider } from './context/AuthContext';
 
 
 const root = ReactDOM.createRoot(
@@ -42,7 +42,9 @@ const router = createBrowserRouter([
 ]);
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <AuthProvider>
+      <RouterProvider router={router}/>
+    </AuthProvider>
   </React.StrictMode>
 );
 

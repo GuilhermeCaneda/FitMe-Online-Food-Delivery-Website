@@ -12,13 +12,8 @@ type CartItemProps = {
 const Cart: React.FC = () => {
 
     
-    let dummyItens: CartItemProps[] = [];
-
-    const testItens = () => {
-        if(!dummyItens.length){
-            return <p>No dishs selected</p>;
-        }
-    }
+    let dummyItens: CartItemProps[] = [{dish: "Brunch for 2 - Veg", restaurant: "from Lunch box", price: 200}, 
+    {dish: "Brunch for 2 - Veg", restaurant: "from Lunch box", price: 200}, {dish: "Brunch for 2 - Veg", restaurant: "from Lunch box", price: 200}, {dish: "Brunch for 2 - Veg", restaurant: "from Lunch box", price: 200}];
 
     return(
         <div className={styles.content}>
@@ -28,8 +23,7 @@ const Cart: React.FC = () => {
             </div>
             
             <div className={styles.itemgallery}>
-                {testItens()
-                    &&  dummyItens.map(item => {
+                {dummyItens.map(item => {
                             return <CartItem restaurant={item.restaurant} dish={item.dish} price={item.price.toString()}/>
                         })
                 }

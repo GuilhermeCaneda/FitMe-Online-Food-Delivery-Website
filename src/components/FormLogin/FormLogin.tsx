@@ -5,10 +5,19 @@ import {useNavigate} from "react-router-dom";
 import styles from "./FormLogin.module.css"
 import axios from 'axios';
 
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+
 const FormLogin = () => {
+
+    const authContext = useContext(AuthContext);
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
+    const [status, setStatus] = useState<Number>();
+    const [token, setToken] = useState<string>('');
+    const [user, setUser] = useState<string>('');
 
     const handleUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
         setUsername(event.target.value);
@@ -19,13 +28,11 @@ const FormLogin = () => {
     }
 
     const navigate = useNavigate();
-
     
     const uploadData = async () => {
         try{
             console.log("Conectando a API");
             const response = await axios.post('https://parseapi.back4app.com/graphql', 
-                
             {
                 query: `
                     mutation LogIn{
@@ -51,9 +58,17 @@ const FormLogin = () => {
                         'X-Parse-Client-Key': 'zXOqJ2k44R6xQqqlpPuizAr3rs58RhHXfU7Aj20V',
                         'Content-Type': 'application/json'
                     }
-                });
+            });
         
-            console.log('Response: ', response.data.data.logIn);
+            console.log('Response: ', response);
+            console.log('Token', response.data.data.logIn.viewer.sessionToken);
+            console.log('userName', response.data.data.logIn.viewer.user.userName);
+            setStatus(response.status);
+            if(response.status==200){
+                setToken(response.data.data.logIn.viewer.sessionToken);
+                setUser(response.data.data.logIn.viewer.user.userName);
+            }
+
         } catch(error){
             console.log("erro: " + error);
             console.error(error);
@@ -65,8 +80,16 @@ const FormLogin = () => {
         console.log("username: " + username);
         console.log("password: " + password);
         uploadData();
-        //navigate('/');
     }
+
+    useEffect(() => {
+        if(status==200 && authContext){
+            authContext.logIn(user, token);
+            console.log(authContext);
+            //navigate('/');
+        }
+    }, [status]);
+
 
     const handleRegister = () => {
         navigate('/register');
@@ -79,6 +102,9 @@ const FormLogin = () => {
                 <FormField label="Password" type="password" onChange={handlePassword}/>
                 <p>Don't have any account? <button onClick={handleRegister}>Register</button></p>
                 <FormButton text="Login"/>
+
+                <p>{authContext?.userName}</p>
+                <p>{authContext?.token}</p>
             </form>
         </div>
         

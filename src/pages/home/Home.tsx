@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         rating: Number;
     }
 
-    const [restaurants, setRestaurants] = useState<Restaurant[]>([{deliveryTime: "a",location: "a",name: "a", objectId: "a",rating: 1}]);
+    const [restaurants, setRestaurants] = useState<Restaurant[]>([{deliveryTime: "a",location: "a",name: "Loading...", objectId: "a",rating: 1}]);
     
     useEffect(()=>{
         const bringData = async () => {
